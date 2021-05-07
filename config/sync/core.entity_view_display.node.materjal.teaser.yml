@@ -1,0 +1,25 @@
+uuid: afcbc781-5a76-44ba-a5e0-2d12dcd8f0b5
+langcode: et
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.materjal.field_interactive
+    - field.field.node.materjal.field_listed
+    - node.type.materjal
+  module:
+    - user
+id: node.materjal.teaser
+targetEntityType: node
+bundle: materjal
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_interactive: true
+  field_listed: true
+  langcode: true

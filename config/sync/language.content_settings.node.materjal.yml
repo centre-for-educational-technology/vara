@@ -1,0 +1,11 @@
+uuid: 3b71d895-68ae-450c-b89e-0f3bda3204f7
+langcode: et
+status: true
+dependencies:
+  config:
+    - node.type.materjal
+id: node.materjal
+target_entity_type_id: node
+target_bundle: materjal
+default_langcode: site_default
+language_alterable: false

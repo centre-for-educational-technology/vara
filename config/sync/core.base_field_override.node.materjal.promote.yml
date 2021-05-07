@@ -1,0 +1,22 @@
+uuid: 42f79061-8d62-450d-9f86-c1b2c4e570d6
+langcode: et
+status: true
+dependencies:
+  config:
+    - node.type.materjal
+id: node.materjal.promote
+field_name: promote
+entity_type: node
+bundle: materjal
+label: 'Ülendatud esilehele'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Sees
+  off_label: Väljas
+field_type: boolean
