@@ -1,0 +1,10 @@
+uuid: 0e2d24b7-b856-4951-a9c2-8b44e1c6832f
+langcode: et
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: AlzeyytA8InBgxIG9H2UDJYs3CG98Zj6yRsDKmlbZwA
+id: short
+label: 'Vaikimisi lühike kuupäevaformaat'
+locked: false
+pattern: 'd/m/Y - H:i'

@@ -11,7 +11,14 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packages.drupal.org/8"
+            "url": "https://packages.drupal.org/8",
+            "exclude": [
+                "drupal/h5p"
+            ]
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/centre-for-educational-technology/drupal-h5p.git"
         }
     ],
     "require": {
@@ -19,12 +26,13 @@
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-project-message": "^9.1",
         "drupal/core-recommended": "^9.1",
+        "drupal/h5p": "dev-8.x-1.x",
         "drush/drush": "^10.4"
     },
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "sort-packages": true

@@ -1,0 +1,13 @@
+uuid: 2a338f7e-41c0-4b49-ac6a-60691446c9bd
+langcode: et
+status: true
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: tWOIjSMobEWOFZddMkNqb9JySbOVwE1diC6NRqcfLTk
+id: comment_unpublish_action
+label: 'Kommentaari muutmine mitteavaldatuks'
+type: comment
+plugin: 'entity:unpublish_action:comment'
+configuration: {  }

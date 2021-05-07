@@ -1,0 +1,12 @@
+uuid: 665be9f7-fd83-406d-8a50-984e12897ec0
+langcode: et
+status: false
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: ElrtInxGjZd7GaapJ5O9n-ugi2hG2IxFivtgn0tHOsk
+id: node.full
+label: 'Kogu sisu'
+targetEntityType: node
+cache: true

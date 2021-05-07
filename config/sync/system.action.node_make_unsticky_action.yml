@@ -1,0 +1,13 @@
+uuid: 88bd5319-55dc-45ca-b84e-ca98443f7d13
+langcode: et
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: lDM9mvIGAu8Sw8rt-uCO4Sr7yX5VPrDPxYcawkbKd6k
+id: node_make_unsticky_action
+label: 'Sisu kleepuvuse eemaldamine'
+type: node
+plugin: node_make_unsticky_action
+configuration: {  }

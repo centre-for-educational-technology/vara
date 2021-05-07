@@ -1,0 +1,15 @@
+uuid: b73b8ed8-9e41-4ee4-91f5-2601eb2e4a0b
+langcode: et
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 97tvtzGOa8_flb22CzSjgtm_YkiGMHvEBO-6q2K9V_U
+id: node_search
+label: Sisu
+path: node
+weight: -10
+plugin: node_search
+configuration:
+  rankings: {  }

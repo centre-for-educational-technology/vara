@@ -1,0 +1,13 @@
+uuid: 3a07ca58-b3b9-4db5-8320-8a4c65e08f32
+langcode: et
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: t43OqwzP3CTbcAagSsWKNy6KwMm_zShXo3c4-So6rQg
+id: node_delete_action
+label: 'Kustuta sisu'
+type: node
+plugin: 'entity:delete_action:node'
+configuration: {  }

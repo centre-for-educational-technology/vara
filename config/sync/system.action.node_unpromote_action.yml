@@ -1,0 +1,13 @@
+uuid: 9c9b3b70-8083-42ce-bc9f-c96ddee9707b
+langcode: et
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: JBptjnfuOMtsdKygklXxoOgeOCTMtQxlkymjnnj-cC0
+id: node_unpromote_action
+label: 'Sisu eemaldamine esilehelt'
+type: node
+plugin: node_unpromote_action
+configuration: {  }

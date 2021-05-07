@@ -1,0 +1,22 @@
+uuid: 06e20f53-2a9a-4c13-b8d1-7720a3ce51a0
+langcode: et
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seven
+_core:
+  default_config_hash: YRY68JWkaUiGeZlWMv1nzeIgDm0ZZwXYgpqUpLFzwAY
+id: seven_content
+theme: seven
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Lehekülje sisuosa'
+  provider: system
+  label_display: '0'
+visibility: {  }

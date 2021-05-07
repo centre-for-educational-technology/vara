@@ -1,0 +1,10 @@
+uuid: 776a673a-0e8f-48b3-b3d4-18b4bf7c1bf0
+langcode: et
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: og8sWXhBuHbLMw3CoiBEZjgqSyhFBFmcbUW_wLcfNbo
+id: long
+label: 'Vaikimisi pikk kuupäevaformaat'
+locked: false
+pattern: 'l, F j, Y - H:i'

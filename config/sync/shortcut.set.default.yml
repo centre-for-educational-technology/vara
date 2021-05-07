@@ -1,0 +1,8 @@
+uuid: aa10b080-a1f8-492d-b5fd-a9c3b7e3edbb
+langcode: et
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: U5VlGjd_SfV0Qm_EfnaynOfc549cNscFAx48JfYoMRI
+id: default
+label: Vaikimisi
