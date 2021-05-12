@@ -15,14 +15,14 @@ function tlu_h5p_simplesamlphp_auth_user_attributes(\Drupal\user\UserInterface $
   $service = \Drupal::service('user.data');
 
   foreach ($definitions as $key => $field) {
-    if (isset($attributes[$key])) {
-      $service->set('tlu_h5p', $account->id(), $field, $attributes[$key]);
+    if (isset($attributes[$key]) && $attributes[$key]) {
+      $service->set('tlu_h5p', $account->id(), $field, $attributes[$key][0]);
       $updated = TRUE;
     }
   }
 
   if (isset($attributes['preferredLanguage'])) {
-    $language = $attributes['preferredLanguage'];
+    $language = $attributes['preferredLanguage'][0];
     $languages = \Drupal::languageManager()->getLanguages();
 
     if (array_key_exists($language, $languages)) {
@@ -42,7 +42,7 @@ function tlu_h5p_simplesamlphp_auth_user_attributes(\Drupal\user\UserInterface $
 /**
  * Implements hook_user_format_name_alter().
  */
-function openid_connect_user_format_name_alter(&$name, \Drupal\Core\Session\AccountInterface $account) {
+function tlu_h5p_user_format_name_alter(&$name, \Drupal\Core\Session\AccountInterface $account) {
   $full_name = \Drupal::service('user.data')->get('tlu_h5p', $account->id(), 'full_name');
 
   if ($full_name) {
