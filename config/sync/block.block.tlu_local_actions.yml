@@ -1,0 +1,20 @@
+uuid: f4f1dc30-df49-4fc1-a9ed-71c07db02aca
+langcode: et
+status: true
+dependencies:
+  theme:
+    - tlu
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: tlu_local_actions
+theme: tlu
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

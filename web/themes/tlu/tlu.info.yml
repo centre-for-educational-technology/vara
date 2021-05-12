@@ -1,0 +1,8 @@
+name: TLU
+type: theme
+description: This is a TLU specific sub-theme of theme Bartik.
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: bartik
+libraries:
+  - tlu/styles

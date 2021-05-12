@@ -1,0 +1,22 @@
+uuid: b81b5565-386a-4632-945b-9a897ff1d30c
+langcode: et
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tlu
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: tlu_powered
+theme: tlu
+region: sidebar_first
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

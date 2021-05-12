@@ -1,0 +1,22 @@
+uuid: a006652c-c4eb-4c61-af67-72ecb5da3772
+langcode: et
+status: true
+dependencies:
+  theme:
+    - tlu
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: tlu_local_tasks
+theme: tlu
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,19 @@
+#header {
+  background-color: #b71134;
+  background-image: -webkit-linear-gradient(top, #a5102f 0%, #b71134 100%);
+  background-image: linear-gradient(to bottom, #a5102f 0%, #b71134 100%);
+}
+a,
+.link {
+  color: #b71134;
+}
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  color: #ea0909;
+}
+a:active,
+.link:active {
+  color: #fe3131;
+}

@@ -1,0 +1,22 @@
+uuid: c360b76a-550c-497d-bb8a-073df328baac
+langcode: et
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - tlu
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: tlu_help
+theme: tlu
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }
