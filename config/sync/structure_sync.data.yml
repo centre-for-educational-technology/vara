@@ -1,0 +1,13 @@
+menus:
+  -
+    menu_name: tools
+    title: 'Lisa materjal'
+    parent: null
+    uri: 'internal:/node/add/materjal'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: et
+    uuid: fe7e3308-28a2-4126-8045-f099afa66c0a
