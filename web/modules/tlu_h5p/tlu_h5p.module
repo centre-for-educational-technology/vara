@@ -12,10 +12,11 @@ function tlu_h5p_simplesamlphp_auth_user_attributes(\Drupal\user\UserInterface $
     'givenName' => 'given_name', // First name
     'displayname' => 'display_name', //Display name (full name)
   ];
+  $service = \Drupal::service('user.data');
 
   foreach ($definitions as $key => $field) {
     if (isset($attributes[$key])) {
-      $account->set('tlu_h5p_' . $field, $attributes[$key]);
+      $service->set('tlu_h5p', $account->id(), $field, $attributes[$key]);
       $updated = TRUE;
     }
   }
@@ -42,12 +43,12 @@ function tlu_h5p_simplesamlphp_auth_user_attributes(\Drupal\user\UserInterface $
  * Implements hook_user_format_name_alter().
  */
 function openid_connect_user_format_name_alter(&$name, \Drupal\Core\Session\AccountInterface $account) {
-  $full_name = \Drupal::service('user.data')->get('tlu_h5p', $account->id(), 'tlu_h5p_full_name');
+  $full_name = \Drupal::service('user.data')->get('tlu_h5p', $account->id(), 'full_name');
 
   if ($full_name) {
     $name = $full_name;
   } else {
-    $display_name = \Drupal::service('user.data')->get('tlu_h5p', $account->id(), 'tlu_h5p_display_name');
+    $display_name = \Drupal::service('user.data')->get('tlu_h5p', $account->id(), 'display_name');
 
     if ($display_name) {
       $name = $display_name;
