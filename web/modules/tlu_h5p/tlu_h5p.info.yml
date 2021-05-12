@@ -1,0 +1,6 @@
+name: TLU H5P
+type: module
+description: 'TLU H5P main module.'
+package: TLU
+core: 8.x
+core_version_requirement: ^8 || ^9

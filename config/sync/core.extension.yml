@@ -36,14 +36,17 @@ module:
   quickedit: 0
   rdf: 0
   shortcut: 0
+  simplesamlphp_auth: 0
   system: 0
   taxonomy: 0
   text: 0
+  tlu_h5p: 0
   toolbar: 0
   tour: 0
   update: 0
   user: 0
   views_ui: 0
+  externalauth: 10
   views: 10
   standard: 1000
 theme:

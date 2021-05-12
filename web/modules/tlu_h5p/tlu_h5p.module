@@ -1,0 +1,56 @@
+<?php
+
+
+/**
+ * Implements hook_simplesamlphp_auth_user_attributes().
+ */
+function tlu_h5p_simplesamlphp_auth_user_attributes(\Drupal\user\UserInterface $account, $attributes) {
+  $updated = FALSE;
+  $definitions = [
+    'sn' => 'surname', // Surname
+    'cn' => 'full_name', // Full name
+    'givenName' => 'given_name', // First name
+    'displayname' => 'display_name', //Display name (full name)
+  ];
+
+  foreach ($definitions as $key => $field) {
+    if (isset($attributes[$key])) {
+      $account->set('tlu_h5p_' . $field);
+      $updated = TRUE;
+    }
+  }
+
+  if (isset($attributes['preferredLanguage'])) {
+    $language = $attributes['preferredLanguage'];
+    $languages = \Drupal::languageManager()->getLanguages();
+
+    if (array_key_exists($language, $languages)) {
+      $account->set('langcode', $language);
+      $account->set('preferred_langcode', $language);
+      $updated = TRUE;
+    }
+  }
+
+  if ($updated) {
+    return $account;
+  }
+
+  return FALSE;
+}
+
+/**
+ * Implements hook_user_format_name_alter().
+ */
+function openid_connect_user_format_name_alter(&$name, \Drupal\Core\Session\AccountInterface $account) {
+  $full_name = \Drupal::service('user.data')->get('tlu_h5p', $account->id(), 'tlu_h5p_full_name');
+
+  if ($full_name) {
+    $name = $full_name;
+  } else {
+    $display_name = \Drupal::service('user.data')->get('tlu_h5p', $account->id(), 'tlu_h5p_display_name');
+
+    if ($display_name) {
+      $name = $display_name;
+    }
+  }
+}
