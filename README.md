@@ -15,8 +15,10 @@
 * Set site identifier to match the one for synchronised data by running `vendor/bin/drush cset system.site uuid <uuid> -y`
   * You can get site unique identifier [here](https://github.com/centre-for-educational-technology/tlu-h5p/blob/main/config/sync/system.site.yml)
 * Import configuration data with `vendor/bin/drush cim -y`
+  * Import structure data is provided by [Structure Sync](https://www.drupal.org/project/structure_sync) module. Run `vendor/bin/drush im` to import menus.
 
 ## Development
 
 * Update site settings with `vendor/bin/drush cim`
 * Export site settings with `vendor/bin/drush cex`
+* Export menus with `vendor/bin/drush em` or use a UI for that. Standard settings export command will be required afterwards.
