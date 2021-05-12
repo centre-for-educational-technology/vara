@@ -15,7 +15,7 @@ function tlu_h5p_simplesamlphp_auth_user_attributes(\Drupal\user\UserInterface $
 
   foreach ($definitions as $key => $field) {
     if (isset($attributes[$key])) {
-      $account->set('tlu_h5p_' . $field);
+      $account->set('tlu_h5p_' . $field, $attributes[$key]);
       $updated = TRUE;
     }
   }
