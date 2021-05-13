@@ -1,4 +1,4 @@
-uuid: c82af1e0-7575-4583-99d1-f575a800470c
+uuid: 54e00fff-e58a-411b-aa5c-240fbb19a41f
 langcode: et
 status: true
 dependencies:
@@ -12,7 +12,7 @@ _core:
   default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
 id: tlu_footer
 theme: tlu
-region: sidebar_first
+region: footer_fifth
 weight: 0
 provider: null
 plugin: 'system_menu_block:footer'
