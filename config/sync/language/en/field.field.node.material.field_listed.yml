@@ -1,0 +1,5 @@
+label: Listed
+description: 'Determines if material is listed in <em>All materials</em> view or not.'
+settings:
+  on_label: 'Yes'
+  off_label: 'No'

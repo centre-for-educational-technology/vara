@@ -1,13 +1,13 @@
-uuid: 42f79061-8d62-450d-9f86-c1b2c4e570d6
+uuid: 2f5e2d8e-732b-4529-b5d9-16a4ea808fda
 langcode: et
 status: true
 dependencies:
   config:
-    - node.type.materjal
-id: node.materjal.promote
+    - node.type.material
+id: node.material.promote
 field_name: promote
 entity_type: node
-bundle: materjal
+bundle: material
 label: 'Ülendatud esilehele'
 description: ''
 required: false

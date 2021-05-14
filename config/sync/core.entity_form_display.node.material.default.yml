@@ -1,18 +1,18 @@
-uuid: 6d132236-db75-4125-8306-dcf3e300a01a
+uuid: 78eb1aa4-301c-4ed1-88ec-34b6241c36af
 langcode: et
 status: true
 dependencies:
   config:
-    - field.field.node.materjal.field_interactive
-    - field.field.node.materjal.field_listed
-    - field.field.node.materjal.field_tags
-    - node.type.materjal
+    - field.field.node.material.field_interactive
+    - field.field.node.material.field_listed
+    - field.field.node.material.field_tags
+    - node.type.material
   module:
     - h5peditor
     - path
-id: node.materjal.default
+id: node.material.default
 targetEntityType: node
-bundle: materjal
+bundle: material
 mode: default
 content:
   created:
@@ -22,27 +22,27 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_interactive:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: h5p_editor
     region: content
   field_listed:
-    weight: 3
+    weight: 1
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_tags:
-    weight: 1
+    weight: 2
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_reference_autocomplete_tags
     region: content
   langcode:
     type: language_select

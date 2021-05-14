@@ -1,4 +1,4 @@
-uuid: da90294e-ed88-4758-be33-e648427f4472
+uuid: 8f71e56a-54c8-454c-9715-d22e0005594f
 langcode: et
 status: true
 dependencies:
@@ -10,8 +10,8 @@ third_party_settings:
       - main
     parent: 'main:'
 name: Materjal
-type: materjal
-description: 'Sisaldab aktiivset H5P baasil loodud sisu.'
+type: material
+description: 'Interaktiivse H5P sisuga materjal'
 help: ''
 new_revision: false
 preview_mode: 0

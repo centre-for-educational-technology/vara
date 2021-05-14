@@ -1,39 +1,39 @@
-uuid: 1445fce6-04a5-43d8-a0e6-a0bd558dfdf5
+uuid: 7b41e284-ad22-40cc-82b9-cc93ac70f1e9
 langcode: et
 status: true
 dependencies:
   config:
-    - field.field.node.materjal.field_interactive
-    - field.field.node.materjal.field_listed
-    - field.field.node.materjal.field_tags
-    - node.type.materjal
+    - field.field.node.material.field_interactive
+    - field.field.node.material.field_listed
+    - field.field.node.material.field_tags
+    - node.type.material
   module:
     - h5p
     - user
-id: node.materjal.default
+id: node.material.default
 targetEntityType: node
-bundle: materjal
+bundle: material
 mode: default
 content:
   field_interactive:
     weight: 3
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     type: h5p_default
     region: content
   field_listed:
-    weight: 2
+    weight: 1
     label: inline
     settings:
       format: default
-      format_custom_true: ''
       format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
     type: boolean
     region: content
   field_tags:
-    weight: 1
+    weight: 2
     label: above
     settings:
       link: true

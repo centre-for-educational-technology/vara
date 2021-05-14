@@ -1,18 +1,18 @@
-uuid: afcbc781-5a76-44ba-a5e0-2d12dcd8f0b5
+uuid: 783bc5f2-eef6-49d7-82fa-9429fd4d4bda
 langcode: et
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.materjal.field_interactive
-    - field.field.node.materjal.field_listed
-    - field.field.node.materjal.field_tags
-    - node.type.materjal
+    - field.field.node.material.field_interactive
+    - field.field.node.material.field_listed
+    - field.field.node.material.field_tags
+    - node.type.material
   module:
     - user
-id: node.materjal.teaser
+id: node.material.teaser
 targetEntityType: node
-bundle: materjal
+bundle: material
 mode: teaser
 content:
   links:

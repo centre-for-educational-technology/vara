@@ -1,10 +1,10 @@
-uuid: 3b541d68-cbec-449d-8a8b-e25f7a49518a
+uuid: 4f6d38ba-851b-468d-91e4-da544d3d3273
 langcode: et
 status: true
 dependencies:
   config:
     - field.storage.node.field_listed
-    - node.type.materjal
+    - node.type.material
     - system.menu.account
     - user.role.authenticated
   module:
@@ -70,59 +70,6 @@ display:
             next: ››
       style:
         type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            title: title
-            field_listed: field_listed
-            created: status
-            changed: created
-            status: changed
-          info:
-            title:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_listed:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            created:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            changed:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            status:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
       row:
         type: fields
       fields:
@@ -312,7 +259,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Loomise kuupäev'
+          label: Loodud
           exclude: false
           alter:
             alter_text: false
@@ -440,12 +387,25 @@ display:
           entity_field: changed
           plugin_id: field
       filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
         type:
           id: type
           table: node_field_data
           field: type
           value:
-            materjal: materjal
+            material: material
           entity_type: node
           entity_field: type
           plugin_id: bundle
@@ -530,7 +490,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: my-materials
+      path: my_materials
       menu:
         type: normal
         title: 'Minu materjalid'
