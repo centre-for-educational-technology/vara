@@ -292,13 +292,13 @@ display:
         - user.permissions
       max-age: -1
       tags: {  }
-  page_1:
+  frontpage:
     display_options:
       path: node
       display_extenders: {  }
     display_plugin: page
     display_title: Lehekülg
-    id: page_1
+    id: frontpage
     position: 1
     cache_metadata:
       contexts:

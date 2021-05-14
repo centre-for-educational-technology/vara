@@ -9,7 +9,7 @@ dependencies:
     - node
     - user
 id: all_materials
-label: 'Kõik materjalid'
+label: 'All materials'
 module: views
 description: ''
 tag: ''
@@ -40,13 +40,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Rakenda
+          submit_button: Submit
           reset_button: false
-          reset_button_label: Tühista
-          exposed_sorts_label: 'Sorteerimise alus'
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Kasvav
-          sort_desc_label: Kahanev
+          sort_asc_label: Ascending
+          sort_desc_label: Descending
       pager:
         type: mini
         options:
@@ -56,12 +56,12 @@ display:
           total_pages: null
           expose:
             items_per_page: false
-            items_per_page_label: 'Kirjeid lehel'
+            items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- Kõik -'
+            items_per_page_options_all_label: '- All -'
             offset: false
-            offset_label: Nihe
+            offset_label: Offset
           tags:
             previous: ‹‹
             next: ››
@@ -93,7 +93,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Pealkiri
+          label: Title
           exclude: false
           element_type: ''
           element_class: ''
@@ -124,7 +124,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Autor
+          label: Author
           exclude: false
           alter:
             alter_text: false
@@ -189,7 +189,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Loomise kuupäev'
+          label: Created
           exclude: false
           alter:
             alter_text: false
@@ -256,7 +256,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Muudetud
+          label: Updated
           exclude: false
           alter:
             alter_text: false
@@ -396,7 +396,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Kõik materjalid'
+      title: 'All materials'
       header: {  }
       footer: {  }
       empty: {  }
@@ -422,8 +422,13 @@ display:
       path: all-materials
       menu:
         type: normal
-        title: 'Kõik materjalid'
+        title: 'All materials'
         menu_name: main
+        description: ''
+        parent: ''
+        weight: 1
+        expanded: false
+        enabled: true
     cache_metadata:
       max-age: -1
       contexts:

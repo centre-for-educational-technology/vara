@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.materjal.field_interactive
     - field.field.node.materjal.field_listed
+    - field.field.node.materjal.field_tags
     - node.type.materjal
   module:
     - user
@@ -22,4 +23,5 @@ content:
 hidden:
   field_interactive: true
   field_listed: true
+  field_tags: true
   langcode: true

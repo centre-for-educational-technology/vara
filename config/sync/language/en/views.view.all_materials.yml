@@ -1,0 +1,31 @@
+label: 'All materials'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Submit
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Ascending
+          sort_desc_label: Descending
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      fields:
+        title:
+          label: Title
+        uid:
+          label: Author
+        created:
+          label: Created
+        changed:
+          label: Updated
+      title: 'All materials'
+  all_materials:
+    display_options:
+      menu:
+        title: 'All materials'
