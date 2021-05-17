@@ -2,3 +2,12 @@ node.add_materjal:
   title: 'Add material'
   route_name: node.add
   route_parameters: { node_type: 'material' }
+simplesamlphp_auth.saml_login:
+  title: 'Login with TLU account'
+  menu_name: account
+  route_name: simplesamlphp_auth.saml_login
+  options:
+    attributes:
+      class:
+        - tlu-login
+

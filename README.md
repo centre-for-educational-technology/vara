@@ -16,9 +16,18 @@
   * You can get site unique identifier [here](https://github.com/centre-for-educational-technology/tlu-h5p/blob/main/config/sync/system.site.yml)
 * Import configuration data with `vendor/bin/drush cim -y`
   * Import structure data is provided by [Structure Sync](https://www.drupal.org/project/structure_sync) module. Run `vendor/bin/drush im` to import menus.
+  * Import estonian locale with `vendor/bin/drush locale-import --override=none et <full-path-to-drupal>/config/locales/et.po`
+
+### SimpleSAMLphp configuration
+
+* Authentication source for name should be set to `tlu-h5p-sp`
+* Required attributes are: sn, cn, uid, givenName, mail, displayname, preferredLanguage
+  * `uid` is used for user unique identifier and `mail` as an email address
+  * Other attributes will be used if provided with checks applied
 
 ## Development
 
 * Update site settings with `vendor/bin/drush cim`
 * Export site settings with `vendor/bin/drush cex`
 * Export menus with `vendor/bin/drush em` or use a UI for that. Standard settings export command will be required afterwards.
+* Export Estonian translations with `/vendor/bin/drush locale:export et > <full-path-to-drupal>/config/locales/et.po`

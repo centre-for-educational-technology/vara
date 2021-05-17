@@ -4,7 +4,7 @@ mail_attr: mail
 unique_id: uid
 user_name: uid
 auth_source: tlu-h5p-sp
-login_link_show: true
+login_link_show: false
 login_link_display_name: 'Federated login'
 header_no_cache: false
 role:

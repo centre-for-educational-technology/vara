@@ -55,3 +55,24 @@ function tlu_h5p_user_format_name_alter(&$name, \Drupal\Core\Session\AccountInte
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function tlu_h5p_preprocess_menu(&$variables) {
+  if (\Drupal::currentUser()->isAnonymous()) {
+    if ($variables['menu_name'] === 'account') {
+      if (isset($variables['items']['user.logout'])) {
+        unset($variables['items']['user.logout']);
+      }
+    }
+  }
+
+  if (\Drupal::currentUser()->isAuthenticated()) {
+    if ($variables['menu_name'] === 'account') {
+      if (isset($variables['items']['simplesamlphp_auth.saml_login'])) {
+        unset($variables['items']['simplesamlphp_auth.saml_login']);
+      }
+    }
+  }
+}
