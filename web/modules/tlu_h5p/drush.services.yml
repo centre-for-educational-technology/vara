@@ -1,0 +1,5 @@
+services:
+  tlu_h5p.commands:
+    class: \Drupal\tlu_h5p\Commands\TluH5pCommands
+    tags:
+      - { name: drush.command }

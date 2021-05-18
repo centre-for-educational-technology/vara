@@ -1,0 +1,17 @@
+{
+    "name": "drupal/tlu_h5p",
+    "description": "TLU H5P main module.",
+    "type": "drupal-module",
+    "autoload": {
+        "psr-4": {
+            "Drupal\\tlu_h5p\\": "src/"
+        }
+    },
+    "extra": {
+        "drush": {
+            "services": {
+                "drush.services.yml": "^9"
+            }
+        }
+    }
+}
