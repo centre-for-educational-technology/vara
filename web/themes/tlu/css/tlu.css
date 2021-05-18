@@ -17,3 +17,11 @@ a:active,
 .link:active {
   color: #fe3131;
 }
+
+.site-footer .block.block-language ul.links li.is-active a.language-link {
+  color: #db8899;
+}
+
+.site-footer .block.block-language ul.links li.is-active a.language-link:hover {
+  color: #f7e7ea;
+}
