@@ -1,0 +1,14 @@
+uuid: bdc88bd1-a07d-4293-ab96-9fbb3ffebfe8
+langcode: et
+status: true
+dependencies:
+  config:
+    - user.role.editor
+  module:
+    - user
+id: user_remove_role_action.editor
+label: 'Remove the Digipädev role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: editor

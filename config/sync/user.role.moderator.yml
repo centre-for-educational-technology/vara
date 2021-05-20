@@ -1,0 +1,11 @@
+uuid: 47c43b8b-5e14-4a31-8a89-d734cd11b905
+langcode: et
+status: true
+dependencies: {  }
+id: moderator
+label: Moderaator
+weight: -7
+is_admin: null
+permissions:
+  - 'delete any material content'
+  - 'edit any material content'

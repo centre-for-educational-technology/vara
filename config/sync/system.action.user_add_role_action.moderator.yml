@@ -1,0 +1,14 @@
+uuid: 1f36a0a6-71d0-48b6-b5dd-e66948d33811
+langcode: et
+status: true
+dependencies:
+  config:
+    - user.role.moderator
+  module:
+    - user
+id: user_add_role_action.moderator
+label: 'Lisa roll Moderaator valitud kasutajatele'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: moderator

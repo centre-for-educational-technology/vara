@@ -1,0 +1,14 @@
+uuid: 4bd61cc7-2a56-49ae-af5a-555086e325c5
+langcode: et
+status: true
+dependencies:
+  config:
+    - user.role.editor
+  module:
+    - user
+id: user_add_role_action.editor
+label: 'Lisa roll Digipädev valitud kasutajatele'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: editor
