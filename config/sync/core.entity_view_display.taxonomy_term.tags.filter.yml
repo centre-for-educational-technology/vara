@@ -1,0 +1,23 @@
+uuid: 85122d71-c8cb-4bbf-a28d-d9fd3dcf1742
+langcode: et
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.filter
+    - taxonomy.vocabulary.tags
+  module:
+    - text
+id: taxonomy_term.tags.filter
+targetEntityType: taxonomy_term
+bundle: tags
+mode: filter
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

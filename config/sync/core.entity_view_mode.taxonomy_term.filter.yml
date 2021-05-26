@@ -1,0 +1,10 @@
+uuid: b3596e93-d64f-4b9c-ac7e-4238f7726b97
+langcode: et
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.filter
+label: Filter
+targetEntityType: taxonomy_term
+cache: true

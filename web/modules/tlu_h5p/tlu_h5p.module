@@ -76,3 +76,25 @@ function tlu_h5p_preprocess_menu(&$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_taxonomy_term_view().
+ */
+function tlu_h5p_taxonomy_term_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if ($view_mode === 'filter') {
+    if (isset($build['name'])) {
+      unset($build['name']);
+    }
+    if (isset($build['description'])) {
+      unset($build['description']);
+    }
+
+    $build['filter_by_plain_text'] = [
+      '#plain_text' => t('Materials for tag: @tag', [
+        '@tag' => $entity->getName(),
+      ]),
+      '#prefix' => '<strong>',
+      '#suffix' => '</strong>',
+    ];
+  }
+}

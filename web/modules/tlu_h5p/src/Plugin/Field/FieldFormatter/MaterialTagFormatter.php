@@ -19,9 +19,11 @@ use Drupal\Core\Url;
  *   }
  * )
  */
-
 class MaterialTagFormatter extends EntityReferenceLabelFormatter
 {
+  /**
+   * {@inheritdoc}
+   */
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $elements = [];
     $output_as_link = $this->getSetting('link');

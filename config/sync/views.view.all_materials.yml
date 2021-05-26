@@ -398,7 +398,20 @@ display:
             label: ''
           granularity: second
       title: 'Kõik materjalid'
-      header: {  }
+      header:
+        entity_taxonomy_term:
+          id: entity_taxonomy_term
+          table: views
+          field: entity_taxonomy_term
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          target: '{{ arguments.field_tags_target_id }}'
+          view_mode: filter
+          bypass_access: false
+          plugin_id: entity
       footer: {  }
       empty: {  }
       relationships: {  }
