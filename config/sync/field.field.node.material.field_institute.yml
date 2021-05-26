@@ -1,0 +1,21 @@
+uuid: 0981958e-98c4-4f52-a168-6f4084d6efef
+langcode: et
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_institute
+    - node.type.material
+  module:
+    - options
+id: node.material.field_institute
+field_name: field_institute
+entity_type: node
+bundle: material
+label: Instituut
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

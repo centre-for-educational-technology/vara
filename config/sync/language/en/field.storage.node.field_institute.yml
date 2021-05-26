@@ -1,0 +1,16 @@
+settings:
+  allowed_values:
+    -
+      label: 'Baltic Film, Media and Arts School'
+    -
+      label: 'School of Digital Technologies'
+    -
+      label: 'School of Educational Sciences'
+    -
+      label: 'School of Humanities'
+    -
+      label: 'School of Natural Sciences and Health'
+    -
+      label: 'School of Governance, Law and Society'
+    -
+      label: 'Haapsalu College'
