@@ -3,6 +3,7 @@ langcode: et
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_institute
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -21,8 +22,19 @@ content:
   contact:
     weight: 5
     region: content
+  field_institute:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   language:
     weight: 0
+    region: content
+  simplesamlphp_auth_user_enable:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
     region: content
   timezone:
     weight: 6

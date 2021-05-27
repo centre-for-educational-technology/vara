@@ -1,8 +1,9 @@
-uuid: c8beff1c-899c-45eb-b178-3cd1d2cb4087
+uuid: 92d78c81-1531-40ed-bfa8-fe8ad5320643
 langcode: et
-status: true
+status: false
 dependencies:
   config:
+    - core.entity_view_mode.user.full
     - field.field.user.user.field_institute
     - field.field.user.user.user_picture
     - image.style.thumbnail
@@ -12,10 +13,10 @@ dependencies:
     - user
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
-id: user.user.default
+id: user.user.full
 targetEntityType: user
 bundle: user
-mode: default
+mode: full
 content:
   field_institute:
     weight: 6
@@ -27,8 +28,6 @@ content:
   member_for:
     weight: 5
     region: content
-    settings: {  }
-    third_party_settings: {  }
   user_picture:
     type: image
     weight: 0
