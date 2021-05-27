@@ -98,3 +98,41 @@ function tlu_h5p_taxonomy_term_view(array &$build, \Drupal\Core\Entity\EntityInt
     ];
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function tlu_h5p_form_user_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $account = \Drupal::currentUser();
+
+  // Remove institute field from user edit from unless current user has "administer users" permission
+  if (isset($form['field_institute']) && !$account->hasPermission('administer users')) {
+    $form['field_institute']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_access().
+ */
+function tlu_h5p_node_access(\Drupal\Core\Entity\EntityInterface $entity, $operation, \Drupal\Core\Session\AccountInterface $account) {
+  $user = \Drupal\user\Entity\User::load($account->id());
+
+  // Editor with matching institute is allowed to edit and delete materials
+  if ($entity->bundle() === 'material' && $user->hasRole('editor') && $user->hasField('field_institute')) {
+    $institute = $user->get('field_institute')->value;
+
+    if ($institute && $entity->hasField('field_institute') && $entity->get('field_institute')->value === $institute) {
+      return \Drupal\Core\Access\AccessResult::allowed();
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function tlu_h5p_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Disable revisions for materials
+  if ($form_id === 'node_material_edit_form') {
+    $form['revision_information']['#access'] = FALSE;
+  }
+}
