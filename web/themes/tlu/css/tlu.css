@@ -25,3 +25,8 @@ a:active,
 .site-footer .block.block-language ul.links li.is-active a.language-link:hover {
   color: #f7e7ea;
 }
+
+.view.search-materials .form-item.form-item-keys {
+  float: none;
+  clear: both;
+}
