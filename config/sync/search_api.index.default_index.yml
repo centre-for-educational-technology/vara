@@ -7,6 +7,7 @@ dependencies:
     - user
     - search_api
   config:
+    - field.storage.node.field_listed
     - field.storage.node.field_tags
     - search_api.server.default_server
     - core.entity_view_mode.node.search_index
@@ -42,6 +43,14 @@ field_settings:
     dependencies:
       module:
         - node
+  field_listed:
+    label: Listed
+    datasource_id: 'entity:node'
+    property_path: field_listed
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_listed
   field_tags:
     label: Tags
     datasource_id: 'entity:node'
