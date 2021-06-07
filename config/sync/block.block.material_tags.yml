@@ -1,0 +1,30 @@
+uuid: f469be12-a307-4843-b3a4-979414e5f557
+langcode: et
+status: true
+dependencies:
+  module:
+    - system
+    - tagclouds
+  theme:
+    - tlu
+id: material_tags
+theme: tlu
+region: content
+weight: -3
+provider: null
+plugin: 'tagclouds_block:tags'
+settings:
+  id: 'tagclouds_block:tags'
+  label: 'Materjalide võtmesõnapilv'
+  provider: tagclouds
+  label_display: '0'
+  cache:
+    max_age: 0
+    contexts: {  }
+  tags: '60'
+  vocabulary: tags
+visibility:
+  request_path:
+    id: request_path
+    pages: /search/materials
+    negate: false
