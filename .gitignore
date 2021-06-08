@@ -109,3 +109,6 @@
 
 # Ignore .env files as they are personal
 /.env
+
+composer.phar
+/web/modules/devel
