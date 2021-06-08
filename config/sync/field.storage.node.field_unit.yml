@@ -1,0 +1,84 @@
+uuid: a176c2ed-c083-45c4-ac60-9b765d30bf86
+langcode: et
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_unit
+field_name: field_unit
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: bfm
+      label: 'Balti filmi, meedia, ja kunstide instituut'
+    -
+      value: dt
+      label: 'Digitehnoloogiate instituut'
+    -
+      value: hti
+      label: 'Haridusteaduste instituut'
+    -
+      value: ht
+      label: 'Humanitaarteaduste instituut'
+    -
+      value: lti
+      label: 'Loodus- ja terviseteaduste instituut'
+    -
+      value: yti
+      label: 'Ühiskonnateaduste instituut'
+    -
+      value: haapsalu
+      label: 'Haapsalu kolledž'
+    -
+      value: ar
+      label: 'Akadeemiline raamatukogu'
+    -
+      value: ay
+      label: 'Avatud akadeemia'
+    -
+      value: pm
+      label: 'Eesti pedagoogika arhiivmuuseum'
+    -
+      value: it
+      label: 'Infotehnoloogia osakond'
+    -
+      value: knk
+      label: 'Karjääri- ja nõustamiskeskus'
+    -
+      value: k
+      label: Kirjastus
+    -
+      value: ci
+      label: 'Konfutsiuse instituut'
+    -
+      value: cc
+      label: Konverentsikeskus
+    -
+      value: op
+      label: Õppeosakond
+    -
+      value: po
+      label: Personaliosakond
+    -
+      value: rb
+      label: 'Rektoraadi büroo'
+    -
+      value: r
+      label: Rektoraat
+    -
+      value: ta
+      label: Teadusosakond
+    -
+      value: pr
+      label: 'Turundus- ja kommunikatsiooni osakond'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

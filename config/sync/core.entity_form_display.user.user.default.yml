@@ -3,7 +3,7 @@ langcode: et
 status: true
 dependencies:
   config:
-    - field.field.user.user.field_institute
+    - field.field.user.user.field_unit
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -22,8 +22,8 @@ content:
   contact:
     weight: 5
     region: content
-  field_institute:
-    weight: 7
+  field_unit:
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select

@@ -3,10 +3,10 @@ langcode: et
 status: true
 dependencies:
   config:
-    - field.field.node.material.field_institute
     - field.field.node.material.field_interactive
     - field.field.node.material.field_listed
     - field.field.node.material.field_tags
+    - field.field.node.material.field_unit
     - node.type.material
   module:
     - h5p
@@ -18,15 +18,8 @@ targetEntityType: node
 bundle: material
 mode: default
 content:
-  field_institute:
-    weight: 4
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_interactive:
-    weight: 5
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -50,6 +43,13 @@ content:
     third_party_settings: {  }
     type: material_tag
     region: content
+  field_unit:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   langcode:
     type: language
     weight: 3
@@ -64,4 +64,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  search_api_excerpt: true

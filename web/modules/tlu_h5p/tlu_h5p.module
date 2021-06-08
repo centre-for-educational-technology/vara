@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Implements hook_simplesamlphp_auth_user_attributes().
  */
@@ -100,18 +99,18 @@ function tlu_h5p_taxonomy_term_view(array &$build, \Drupal\Core\Entity\EntityInt
 }
 
 /**
- * Checks if Editor role is set and shows a warning message if institute value is is empty.
+ * Checks if Editor role is set and shows a warning message if unit value is is empty.
  * Should only be present for users with administrative privileges.
  *
  * @param array $form
  * @param \Drupal\Core\Form\FormStateInterface $form_state
  */
 function _tlu_h5p_user_form_callback(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  if (isset($form['field_institute'])) {
+  if (isset($form['field_unit'])) {
     $values = $form_state->getValues();
 
-    if ($values['roles'] && in_array('editor', $values['roles']) && empty($values['field_institute'])) {
-      \Drupal::messenger()->addWarning(t('User account has Editor role without Institute value present. Please note that it will only have any effect when institute value is present.'));
+    if ($values['roles'] && in_array('editor', $values['roles']) && empty($values['field_unit'])) {
+      \Drupal::messenger()->addWarning(t('User account has Editor role without Unit value present. Please note that it will only have any effect when unit value is present.'));
     }
   }
 }
@@ -122,12 +121,12 @@ function _tlu_h5p_user_form_callback(array &$form, \Drupal\Core\Form\FormStateIn
 function tlu_h5p_form_user_form_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   $account = \Drupal::currentUser();
 
-  // Remove institute field from user edit from unless current user has "administer users" permission
-  if (isset($form['field_institute']) && !$account->hasPermission('administer users')) {
-    $form['field_institute']['#access'] = FALSE;
+  // Remove unit field from user edit from unless current user has "administer users" permission
+  if (isset($form['field_unit']) && !$account->hasPermission('administer users')) {
+    $form['field_unit']['#access'] = FALSE;
   }
 
-  if (isset($form['field_institute']) && $account->hasPermission('administer users')) {
+  if (isset($form['field_unit']) && $account->hasPermission('administer users')) {
     $form['actions']['submit']['#submit'][] = '_tlu_h5p_user_form_callback';
   }
 }
@@ -138,11 +137,11 @@ function tlu_h5p_form_user_form_alter(array &$form, \Drupal\Core\Form\FormStateI
 function tlu_h5p_node_access(\Drupal\Core\Entity\EntityInterface $entity, $operation, \Drupal\Core\Session\AccountInterface $account) {
   $user = \Drupal\user\Entity\User::load($account->id());
 
-  // Editor with matching institute is allowed to edit and delete materials
-  if ($entity->bundle() === 'material' && $user->hasRole('editor') && $user->hasField('field_institute')) {
-    $institute = $user->get('field_institute')->value;
+  // Editor with matching unit is allowed to edit and delete materials
+  if ($entity->bundle() === 'material' && $user->hasRole('editor') && $user->hasField('field_unit')) {
+    $unit = $user->get('field_unit')->value;
 
-    if ($institute && $entity->hasField('field_institute') && $entity->get('field_institute')->value === $institute) {
+    if ($unit && $entity->hasField('field_unit') && $entity->get('field_unit')->value === $unit) {
       return \Drupal\Core\Access\AccessResult::allowed();
     }
   }

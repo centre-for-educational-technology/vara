@@ -1,17 +1,17 @@
-uuid: 0981958e-98c4-4f52-a168-6f4084d6efef
+uuid: 4c38cdca-c0f2-408b-98f1-d8864de362e3
 langcode: et
 status: true
 dependencies:
   config:
-    - field.storage.node.field_institute
+    - field.storage.node.field_unit
     - node.type.material
   module:
     - options
-id: node.material.field_institute
-field_name: field_institute
+id: node.material.field_unit
+field_name: field_unit
 entity_type: node
 bundle: material
-label: Instituut
+label: Üksus
 description: ''
 required: true
 translatable: false

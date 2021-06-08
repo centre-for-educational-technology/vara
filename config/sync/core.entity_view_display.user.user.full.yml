@@ -4,12 +4,11 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.user.full
-    - field.field.user.user.field_institute
+    - field.field.user.user.field_unit
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
-    - options
     - user
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
@@ -18,13 +17,6 @@ targetEntityType: user
 bundle: user
 mode: full
 content:
-  field_institute:
-    weight: 6
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   member_for:
     weight: 5
     region: content
@@ -38,4 +30,6 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  field_unit: true
   langcode: true
+  search_api_excerpt: true

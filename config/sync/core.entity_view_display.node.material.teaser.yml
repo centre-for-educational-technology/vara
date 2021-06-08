@@ -4,10 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.material.field_institute
     - field.field.node.material.field_interactive
     - field.field.node.material.field_listed
     - field.field.node.material.field_tags
+    - field.field.node.material.field_unit
     - node.type.material
   module:
     - user
@@ -22,8 +22,9 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_institute: true
   field_interactive: true
   field_listed: true
   field_tags: true
+  field_unit: true
   langcode: true
+  search_api_excerpt: true
