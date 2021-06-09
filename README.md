@@ -36,6 +36,16 @@
 
 Other details would be provided from the TLU IT department side along with metadata settings and configuration suggestions.
 
+### Update
+
+Update could depend on changes made to the repository. There are a few different actions to be taken that would cover all the cases:
+
+* `composer install` would update all the dependencies, which would also require running `drush updatedb` and `drush cr` that could be required in case of updates to Drupal Core or any of the modules.
+* `drush cim` would synchronise the configuration from the repository with the current instance. Please note that `drush cron` might be required to rebuild search indexes if any fields were added to or removed from the corresponding configuration.
+* `drush locale-import --override=none <language-code> <full-path-to-drupal>/config/locales/<language-code>.po` to update translations, with possible languages being **et** and **ru**.
+
+It would be wise to enable maintenance mode before applying the updates with `drush state:set system.maintenance_mode 1` and then disabling it once the process is complete with `drush state:set system.maintenance_mode 0`. You can also read the [Updating Drupal core via Composer](https://www.drupal.org/docs/updating-drupal/updating-drupal-core-via-composer#update-all-steps) guide to get a better understanding of the process.
+
 ## Development
 
 * Update site settings with `vendor/bin/drush cim`
