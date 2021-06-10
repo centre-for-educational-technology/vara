@@ -52,3 +52,4 @@ It would be wise to enable maintenance mode before applying the updates with `dr
 * Export site settings with `vendor/bin/drush cex`
 * Export menus with `vendor/bin/drush em` or use a UI for that. Standard settings export command will be required afterwards.
 * Export Estonian translations with `/vendor/bin/drush locale:export et > <full-path-to-drupal>/config/locales/et.po`
+* Export Estonian translations with `/vendor/bin/drush locale:export ru > <full-path-to-drupal>/config/locales/ru.po`

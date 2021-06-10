@@ -1,4 +1,4 @@
-label: 'Поиск по содержанию'
+label: 'Поиск материалов'
 display:
   default:
     display_title: Основной
@@ -10,6 +10,7 @@ display:
           exposed_sorts_label: 'Сортировать по'
           sort_asc_label: 'По возрастанию'
           sort_desc_label: 'По убыванию'
+          text_input_required: 'Пожалуйста введиьте колючевые слова для поиска.'
       pager:
         options:
           tags:
@@ -23,3 +24,23 @@ display:
         search_api_fulltext:
           expose:
             label: Поиск
+            placeholder: 'Текст поиска'
+        search_api_language:
+          expose:
+            label: Язык
+        field_unit:
+          expose:
+            label: Подразделение
+        field_tags:
+          expose:
+            label: 'Ключевые слова'
+      title: 'Поиск материалов'
+      header:
+        result:
+          content: 'Показаны результаты @start - @end из @total'
+  search_materials:
+    display_title: Страница
+    display_options:
+      menu:
+        title: 'Поиск материалов'
+description: 'Страница поиска материалов'

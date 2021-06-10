@@ -12,7 +12,7 @@ field_name: field_unit
 entity_type: user
 bundle: user
 label: Üksus
-description: 'Kasutaja instituuti kasutatakse <b>Digipädevad</b> rolli juures õiguste kontrollimiseks, kus digipädevad saavad kõiki oma üksuse materjale <b>muuta</b> ja <b>kustutada</b>.'
+description: 'Kasutaja üksust kasutatakse <b>Digipädevad</b> rolli juures õiguste kontrollimiseks, kus digipädevad saavad kõiki oma üksuse materjale <b>muuta</b> ja <b>kustutada</b>.'
 required: false
 translatable: false
 default_value: {  }

@@ -1,31 +1,36 @@
-label: 'Search content'
+label: 'Search materials'
 description: 'A search page preconfigured to search through the content of your site'
 display:
   default:
-    display_title: Master
     display_options:
       exposed_form:
         options:
           submit_button: Search
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
           text_input_required: 'Please enter some keywords to search.'
       pager:
         options:
           tags:
             previous: '‹ previous'
             next: 'next ›'
-          expose:
-            items_per_page_label: 'Items per page'
-            items_per_page_options_all_label: '- All -'
-            offset_label: Offset
+          expose: {  }
       filters:
         search_api_fulltext:
           expose:
             label: Search
-      title: 'Search Content'
+            placeholder: 'Search text'
+        search_api_language:
+          expose:
+            label: Language
+        field_unit:
+          expose:
+            label: Unit
+        field_tags:
+          expose:
+            label: Tags
+      title: 'Search materials'
       header:
-        result:
-          content: 'Displaying results @start - @end of @total'
+        result: {  }
+  search_materials:
+    display_options:
+      menu:
+        title: 'Search materials'
