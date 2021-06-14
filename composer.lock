@@ -1760,11 +1760,11 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/centre-for-educational-technology/drupal-h5p.git",
-                "reference": "ec28fad429884e3db83a48f8a5eb47250e5caf64"
+                "reference": "ab07964434a783635043caa102707f9ca603832c"
             },
             "require": {
                 "h5p/h5p-core": "1.24.2",
-                "h5p/h5p-editor": "1.24.1"
+                "h5p/h5p-editor": "1.24.3"
             },
             "default-branch": true,
             "type": "drupal-module",
@@ -1773,7 +1773,7 @@
             ],
             "description": "Drupal H5P Module.",
             "homepage": "http://drupal.org/project/h5p",
-            "time": "2021-05-07T14:11:20+00:00"
+            "time": "2021-05-07T14:01:00+00:00"
         },
         {
             "name": "drupal/search_api",
@@ -2855,16 +2855,16 @@
         },
         {
             "name": "h5p/h5p-editor",
-            "version": "1.24.1",
+            "version": "1.24.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/h5p/h5p-editor-php-library.git",
-                "reference": "9361892a22ac6ab91e010e0b8a0a0e836f45a16a"
+                "reference": "338ae5bad572fe3d7c0a355d8ba8e24f360bb698"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/h5p/h5p-editor-php-library/zipball/9361892a22ac6ab91e010e0b8a0a0e836f45a16a",
-                "reference": "9361892a22ac6ab91e010e0b8a0a0e836f45a16a",
+                "url": "https://api.github.com/repos/h5p/h5p-editor-php-library/zipball/338ae5bad572fe3d7c0a355d8ba8e24f360bb698",
+                "reference": "338ae5bad572fe3d7c0a355d8ba8e24f360bb698",
                 "shasum": ""
             },
             "require": {
@@ -2910,9 +2910,9 @@
             ],
             "support": {
                 "issues": "https://github.com/h5p/h5p-editor-php-library/issues",
-                "source": "https://github.com/h5p/h5p-editor-php-library/tree/1.24.1"
+                "source": "https://github.com/h5p/h5p-editor-php-library/tree/1.24.3"
             },
-            "time": "2019-10-30T14:56:53+00:00"
+            "time": "2021-06-13T17:44:27+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -5570,16 +5570,16 @@
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-negotiate",
-            "version": "v0.9.10",
+            "version": "v0.9.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/simplesamlphp-module-negotiate.git",
-                "reference": "db05ff40399c66e3f14697a8162da6b2fbdab47d"
+                "reference": "e7c4597110c753a750cd522220fc2a5a34b7c1b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-negotiate/zipball/db05ff40399c66e3f14697a8162da6b2fbdab47d",
-                "reference": "db05ff40399c66e3f14697a8162da6b2fbdab47d",
+                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-negotiate/zipball/e7c4597110c753a750cd522220fc2a5a34b7c1b8",
+                "reference": "e7c4597110c753a750cd522220fc2a5a34b7c1b8",
                 "shasum": ""
             },
             "require": {
@@ -5623,7 +5623,7 @@
                 "issues": "https://github.com/tvdijen/simplesamlphp-module-negotiate/issues",
                 "source": "https://github.com/tvdijen/simplesamlphp-module-negotiate"
             },
-            "time": "2021-01-22T13:36:09+00:00"
+            "time": "2021-05-17T11:01:39+00:00"
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-oauth",
@@ -6198,16 +6198,16 @@
         },
         {
             "name": "symfony/cache",
-            "version": "v5.2.7",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "1d801d1dc5e3840e832568db6b35a954cfb435a8"
+                "reference": "44fd0f97d1fb198d344f22379dfc56af2221e608"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/1d801d1dc5e3840e832568db6b35a954cfb435a8",
-                "reference": "1d801d1dc5e3840e832568db6b35a954cfb435a8",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/44fd0f97d1fb198d344f22379dfc56af2221e608",
+                "reference": "44fd0f97d1fb198d344f22379dfc56af2221e608",
                 "shasum": ""
             },
             "require": {
@@ -6215,6 +6215,7 @@
                 "psr/cache": "^1.0|^2.0",
                 "psr/log": "^1.1",
                 "symfony/cache-contracts": "^1.1.7|^2",
+                "symfony/deprecation-contracts": "^2.1",
                 "symfony/polyfill-php80": "^1.15",
                 "symfony/service-contracts": "^1.1|^2",
                 "symfony/var-exporter": "^4.4|^5.0"
@@ -6232,7 +6233,7 @@
             },
             "require-dev": {
                 "cache/integration-tests": "dev-master",
-                "doctrine/cache": "^1.6",
+                "doctrine/cache": "^1.6|^2.0",
                 "doctrine/dbal": "^2.10|^3.0",
                 "predis/predis": "^1.1",
                 "psr/simple-cache": "^1.0",
@@ -6273,7 +6274,7 @@
                 "psr6"
             ],
             "support": {
-                "source": "https://github.com/symfony/cache/tree/v5.2.7"
+                "source": "https://github.com/symfony/cache/tree/v5.3.0"
             },
             "funding": [
                 {
@@ -6289,7 +6290,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-04-23T16:56:33+00:00"
+            "time": "2021-05-26T17:43:10+00:00"
         },
         {
             "name": "symfony/cache-contracts",
@@ -6689,6 +6690,73 @@
                 }
             ],
             "time": "2021-01-27T09:09:26+00:00"
+        },
+        {
+            "name": "symfony/deprecation-contracts",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/deprecation-contracts.git",
+                "reference": "5f38c8804a9e97d23e0c8d63341088cd8a22d627"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/5f38c8804a9e97d23e0c8d63341088cd8a22d627",
+                "reference": "5f38c8804a9e97d23e0c8d63341088cd8a22d627",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "2.4-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "function.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "A generic function and convention to trigger deprecation notices",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v2.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-03-23T23:28:01+00:00"
         },
         {
             "name": "symfony/error-handler",
@@ -9008,16 +9076,16 @@
         },
         {
             "name": "symfony/var-exporter",
-            "version": "v5.2.7",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-exporter.git",
-                "reference": "01184a5ab95eb9500b9b0ef3e525979e003d9c81"
+                "reference": "7a7c9dd972541f78e7815c03c0bae9f81e0e9dbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/01184a5ab95eb9500b9b0ef3e525979e003d9c81",
-                "reference": "01184a5ab95eb9500b9b0ef3e525979e003d9c81",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/7a7c9dd972541f78e7815c03c0bae9f81e0e9dbb",
+                "reference": "7a7c9dd972541f78e7815c03c0bae9f81e0e9dbb",
                 "shasum": ""
             },
             "require": {
@@ -9061,7 +9129,7 @@
                 "serialize"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-exporter/tree/v5.3.0-BETA1"
+                "source": "https://github.com/symfony/var-exporter/tree/v5.3.0"
             },
             "funding": [
                 {
@@ -9077,7 +9145,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-04-01T10:42:13+00:00"
+            "time": "2021-05-26T17:40:38+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -9555,5 +9623,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
