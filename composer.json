@@ -29,7 +29,6 @@
         "drupal/h5p": "dev-8.x-1.x",
         "drupal/search_api": "^1.19",
         "drupal/simplesamlphp_auth": "^3.2",
-        "drupal/structure_sync": "^2.0",
         "drupal/tagclouds": "^2.0",
         "drush/drush": "^10.4"
     },
