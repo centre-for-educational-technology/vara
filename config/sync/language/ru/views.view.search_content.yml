@@ -10,7 +10,7 @@ display:
           exposed_sorts_label: 'Сортировать по'
           sort_asc_label: 'По возрастанию'
           sort_desc_label: 'По убыванию'
-          text_input_required: 'Пожалуйста введиьте колючевые слова для поиска.'
+          text_input_required: 'Пожалуйста введите колючевые слова для поиска.'
       pager:
         options:
           tags:
