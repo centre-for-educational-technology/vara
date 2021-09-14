@@ -11,7 +11,6 @@ dependencies:
     - field.storage.node.field_tags
     - field.storage.node.field_unit
     - search_api.server.default_server
-    - core.entity_view_mode.node.search_index
 _core:
   default_config_hash: GLmLegZGHtMF6annRqgjizJAoiAip-IT-XOsDMCZfog
 id: default_index
@@ -84,8 +83,7 @@ field_settings:
         anonymous: anonymous
       view_mode:
         'entity:node':
-          article: search_index
-          page: search_index
+          material: ''
   status:
     label: 'Publishing status'
     datasource_id: 'entity:node'
