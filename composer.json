@@ -26,7 +26,7 @@
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-project-message": "^9.1",
         "drupal/core-recommended": "^9.1",
-        "drupal/h5p": "dev-8.x-1.x",
+        "drupal/h5p": "1.0-rc19",
         "drupal/search_api": "^1.19",
         "drupal/simplesamlphp_auth": "^3.2",
         "drupal/tagclouds": "^2.0",
@@ -35,7 +35,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "config": {
         "sort-packages": true
