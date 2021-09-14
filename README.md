@@ -18,6 +18,8 @@
 * Import translations
   * Current translations are in Estonian (`et`) and Russian (`ru`)
   * Translations can be imported using specific command: `vendor/bin/drush locale-import --override=none <language-code> <full-path-to-drupal>/config/locales/<language-code>.po`
+* Add H5P.MathDisplay library
+  * Read documentation for the [H5P MathInput](https://git.drupalcode.org/project/h5p_math_input) module or go directly to the [H5P documentation](https://h5p.org/mathematical-expressions) download the library package and upload that through the library admin page.
 
 ### SimpleSAMLphp configuration
 

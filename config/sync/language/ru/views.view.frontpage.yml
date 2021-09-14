@@ -26,6 +26,6 @@ display:
             next: 'Следующий ›'
             first: '« Первая'
             last: 'Последняя »'
-    display_title: Основной
+    display_title: 'По умолчанию'
   feed_1:
     display_title: 'Поток данных'

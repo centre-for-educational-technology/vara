@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0dbf94148181681d1524fa5a7963c690",
+    "content-hash": "8e9b5cb57c0b9a406a49e56ea5fa1358",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1767,6 +1767,58 @@
             "description": "Drupal H5P Module.",
             "homepage": "http://drupal.org/project/h5p",
             "time": "2021-05-07T14:01:00+00:00"
+        },
+        {
+            "name": "drupal/h5p_math_input",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/h5p_math_input.git",
+                "reference": "1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/h5p_math_input-1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": "012d64cc2c1e440308bb3408896c6b198eea4ac2"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/h5p": "^1.0@RC"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0",
+                    "datestamp": "1631542410",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "pjotr.savitski",
+                    "homepage": "https://www.drupal.org/user/3594177"
+                }
+            ],
+            "description": "Implements Visual Math Editor to H5P fields.",
+            "homepage": "https://www.drupal.org/project/h5p_math_input",
+            "keywords": [
+                "Drupal",
+                "Math Editor",
+                "Math Input",
+                "h5p"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/h5p_math_input",
+                "issues": "https://www.drupal.org/project/issues/h5p_math_input"
+            }
         },
         {
             "name": "drupal/search_api",
