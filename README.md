@@ -8,12 +8,13 @@
 ## Installation
 
 * `composer install`
-* Setup Drupal site with language set to **Estonian**
+* Setup Drupal site with language set to **English** with profile set to **Standard**
 * Make sure that **configuration synchronisation directory** is set to `$settings['config_sync_directory'] = '../config/sync';`
 * Override SimpleSAMLphp location unless you are using the default one from vendor `$settings['simplesamlphp_dir'] = '<full-path-to-simplesamlphp>';`
   * Please note that local authentication service provider has to be configured with the TLU identity provider named `tlu-h5p-sp`
 * Set site identifier to match the one for synchronised data by running `vendor/bin/drush cset system.site uuid <uuid> -y`
   * You can get site unique identifier [here](https://github.com/centre-for-educational-technology/tlu-h5p/blob/main/config/sync/system.site.yml)
+* Remove default shortcuts by running `vendor/bin/drush ev '$entity_type = "shortcut"; $storage_handler = \Drupal::entityTypeManager()->getStorage($entity_type); $storage_handler->delete($storage_handler->loadMultiple(\Drupal::entityQuery($entity_type)->execute()));'`
 * Import configuration data with `vendor/bin/drush cim -y`
 * Import translations
   * Current translations are in Estonian (`et`) and Russian (`ru`)
