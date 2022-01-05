@@ -16,8 +16,8 @@ plugin: 'tagclouds_block:tags'
 settings:
   id: 'tagclouds_block:tags'
   label: 'Materjalide võtmesõnapilv'
-  provider: tagclouds
   label_display: '0'
+  provider: tagclouds
   cache:
     max_age: 0
     contexts: {  }
@@ -26,5 +26,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /search/materials
     negate: false
+    pages: /search/materials

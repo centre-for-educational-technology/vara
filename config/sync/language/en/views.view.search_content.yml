@@ -12,7 +12,6 @@ display:
           tags:
             previous: '‹ previous'
             next: 'next ›'
-          expose: {  }
       filters:
         search_api_fulltext:
           expose:
@@ -28,8 +27,6 @@ display:
           expose:
             label: Tags
       title: 'Search materials'
-      header:
-        result: {  }
   search_materials:
     display_options:
       menu:

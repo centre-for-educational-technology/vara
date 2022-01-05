@@ -1,11 +1,13 @@
+_core:
+  default_config_hash: RMy8ch2MOT68bCD63OGZQRdMk2pD6UXPEZMuCIisbfs
 langcode: et
 activate: true
-mail_attr: mail
-unique_id: uid
-user_name: uid
 auth_source: tlu-h5p-sp
-login_link_show: false
 login_link_display_name: 'Federated login'
+login_link_show: false
+user_name: uid
+unique_id: uid
+mail_attr: mail
 header_no_cache: false
 role:
   population: ''
@@ -26,5 +28,3 @@ autoenablesaml: false
 debug: false
 secure: false
 httponly: false
-_core:
-  default_config_hash: RMy8ch2MOT68bCD63OGZQRdMk2pD6UXPEZMuCIisbfs

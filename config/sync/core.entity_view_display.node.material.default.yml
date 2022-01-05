@@ -19,50 +19,50 @@ bundle: material
 mode: default
 content:
   field_interactive:
-    weight: 6
+    type: h5p_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: h5p_default
+    weight: 6
     region: content
   field_listed:
-    weight: 1
+    type: boolean
     label: inline
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 1
     region: content
   field_tags:
-    weight: 2
+    type: material_tag
     label: above
     settings:
       link: '1'
     third_party_settings: {  }
-    type: material_tag
+    weight: 2
     region: content
   field_unit:
-    weight: 5
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 5
     region: content
   langcode:
     type: language
-    weight: 3
-    region: content
     label: above
     settings:
-      native_language: true
       link_to_entity: false
+      native_language: true
     third_party_settings: {  }
-  links:
-    weight: 0
+    weight: 3
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   search_api_excerpt: true
