@@ -9,7 +9,7 @@ locally installed Drush dependency.
 
 ```shell
 git pull
-composer install
+composer install --no-dev
 vendor/bin/drush sset system.maintenance_mode 1
 vendor/bin/drush cr
 vendor/bin/drush cim
