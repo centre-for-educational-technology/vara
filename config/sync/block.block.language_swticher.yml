@@ -8,7 +8,7 @@ dependencies:
     - tlu
 id: language_swticher
 theme: tlu
-region: footer_fifth
+region: header
 weight: -5
 provider: null
 plugin: 'language_block:language_interface'
