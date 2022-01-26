@@ -9,7 +9,7 @@ dependencies:
     - tlu
 id: material_tags
 theme: tlu
-region: content
+region: sidebar_first
 weight: -3
 provider: null
 plugin: 'tagclouds_block:tags'

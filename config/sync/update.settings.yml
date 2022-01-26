@@ -10,5 +10,5 @@ fetch:
   timeout: 30
 notification:
   emails:
-    - pjotr.savitski@tlu.ee
+    - oppevara@tlu.ee
   threshold: security

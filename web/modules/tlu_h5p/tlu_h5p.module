@@ -155,4 +155,9 @@ function tlu_h5p_form_node_form_alter(array &$form, \Drupal\Core\Form\FormStateI
   if ($form_id === 'node_material_edit_form') {
     $form['revision_information']['#access'] = FALSE;
   }
+
+  // Allow all users to change material publishing status
+  if ($form_id === 'node_material_form' || $form_id === 'node_material_edit_form') {
+    $form['status']['#access'] = TRUE;
+  }
 }
