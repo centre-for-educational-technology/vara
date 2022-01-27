@@ -10,6 +10,7 @@ dependencies:
   module:
     - node
     - user
+    - taxonomy
     - search_api
 _core:
   default_config_hash: GLmLegZGHtMF6annRqgjizJAoiAip-IT-XOsDMCZfog
@@ -102,6 +103,17 @@ field_settings:
     dependencies:
       module:
         - node
+  tags_entity_name:
+    label: 'Tags entity name'
+    datasource_id: 'entity:node'
+    property_path: 'field_tags:entity:name'
+    type: text
+    boost: !!float 5
+    dependencies:
+      config:
+        - field.storage.node.field_tags
+      module:
+        - taxonomy
   title:
     label: Title
     datasource_id: 'entity:node'
@@ -152,6 +164,7 @@ processor_settings:
   entity_status:
     weights:
       preprocess_index: -10
+  entity_type: {  }
   html_filter:
     weights:
       preprocess_index: -3
