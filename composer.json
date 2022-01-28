@@ -23,6 +23,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "^1.7",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-project-message": "^9.1",
         "drupal/core-recommended": "^9.1",
@@ -96,6 +97,11 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "patches": {
+            "drupal/h5p": {
+                "Use display name instead of username for initial author in metadata": "patches/h5p-metadata-display-name-as-default-author.patch"
+            }
         }
     }
 }

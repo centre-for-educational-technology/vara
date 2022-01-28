@@ -1,0 +1,25 @@
+diff --git a/src/H5PDrupal/H5PDrupal.php b/src/H5PDrupal/H5PDrupal.php
+index 81ee470..5ecb8de 100644
+--- a/src/H5PDrupal/H5PDrupal.php
++++ b/src/H5PDrupal/H5PDrupal.php
+@@ -131,6 +131,7 @@ class H5PDrupal implements \H5PFrameworkInterface {
+     if ($user->id()) {
+       $settings['user'] = [
+         'name' => $user->getAccountName(),
++        'displayName' => $user->getDisplayName(),
+         'mail' => $user->getEmail(),
+       ];
+     }
+diff --git a/vendor/h5p/h5p-editor/scripts/h5peditor-metadata.js b/vendor/h5p/h5p-editor/scripts/h5peditor-metadata.js
+index 3c7a778..678bf8d 100644
+--- a/vendor/h5p/h5p-editor/scripts/h5peditor-metadata.js
++++ b/vendor/h5p/h5p-editor/scripts/h5peditor-metadata.js
+@@ -21,7 +21,7 @@ H5PEditor.MetadataForm = (function (EventDispatcher, $, metadataSemantics) {
+     // (but in a special way since we process multiple semantics chunks)
+ 
+     // Set current author as default in semantics
+-    const currentUserName = (H5PIntegration.user && H5PIntegration.user.name) ? H5PIntegration.user.name : undefined;
++    const currentUserName = (H5PIntegration.user && H5PIntegration.user.displayName) ? H5PIntegration.user.displayName : (H5PIntegration.user && H5PIntegration.user.name) ? H5PIntegration.user.name : undefined;
+     if (currentUserName) {
+       // Set current user as default for "changed by":
+       findField('changes').field.fields[1].default = currentUserName;
