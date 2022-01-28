@@ -3,12 +3,10 @@ langcode: et
 status: true
 dependencies:
   config:
-    - field.field.user.user.field_unit
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
-    - options
     - user
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
@@ -17,13 +15,6 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  field_unit:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 7
-    region: content
   member_for:
     settings: {  }
     third_party_settings: {  }
