@@ -20,7 +20,8 @@ function tlu_h5p_simplesamlphp_auth_user_attributes(\Drupal\user\UserInterface $
     }
   }
 
-  if (isset($attributes['preferredLanguage'])) {
+  // Only set language preference on initial login
+  if (isset($attributes['preferredLanguage']) && !$account->getLastAccessedTime()) {
     $language = $attributes['preferredLanguage'][0];
     $languages = \Drupal::languageManager()->getLanguages();
 
