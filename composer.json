@@ -1,24 +1,17 @@
 {
-    "name": "drupal/recommended-project",
+    "name": "drupal/tlu-h5p",
     "description": "Project template for Drupal 9 projects with a relocated document root",
     "type": "project",
     "license": "GPL-2.0-or-later",
-    "homepage": "https://www.drupal.org/project/drupal",
+    "homepage": "https://github.com/centre-for-educational-technology/tlu-h5p",
     "support": {
-        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
-        "chat": "https://www.drupal.org/node/314178"
+        "docs": "https://github.com/centre-for-educational-technology/tlu-h5p/blob/main/README.md"
     },
     "repositories": [
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8",
-            "exclude": [
-                "drupal/h5p"
-            ]
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/centre-for-educational-technology/drupal-h5p.git"
+            "exclude": []
         }
     ],
     "require": {
@@ -27,7 +20,7 @@
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-project-message": "^9.1",
         "drupal/core-recommended": "^9.1",
-        "drupal/h5p": "1.0-rc19",
+        "drupal/h5p": "^2.0.0@alpha",
         "drupal/h5p_math_input": "^1.0",
         "drupal/search_api": "^1.19",
         "drupal/simplesamlphp_auth": "^3.2",
