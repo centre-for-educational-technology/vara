@@ -1,0 +1,61 @@
+/* ---------------------------------------------------------------------------*/
+/* SUBTHEME                                                                   */
+/* ---------------------------------------------------------------------------*/
+@charset "UTF-8";
+
+// BASE
+@import "../base/base";
+
+@include media-breakpoint-up(xs) {
+  //////////////////////////////////////////////////////////////////////////////
+  // [ COMMON ]
+  #menu-add {
+    button a,
+    ul:not(.contextual-links) a {
+      // SAML login icon
+      &[href*='saml_login'] {
+        &:before {
+          mask     : url('../icon/login.svg');
+          mask-size: cover;
+        }
+      }
+    }
+    //////////////////////////////////////////////////////////////////////////////
+    // [ MENU LANGUAGE ]
+    .block-language {
+      // dropdown
+      .dropdown {
+        .dropdown-menu {
+          //Flags
+          #language-selector a,
+          ul:not(.contextual-links) a {
+            &[hreflang="et"] {
+              background-image: url('../image/flags/Estonia.png');
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.block {
+  &.block-tagclouds {
+    word-break: break-all;
+
+    .tagclouds-term {
+      &:not(:first-child),
+      &:not(:last-child) {
+        margin-left: 0.2em;
+      }
+
+      a {
+        &.tagclouds {
+          &:hover {
+            border-bottom: 2px dotted;
+          }
+        }
+      }
+    }
+  }
+}

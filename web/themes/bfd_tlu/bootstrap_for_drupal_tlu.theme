@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Bootstrap for Drupal subtheme.
+ */
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter for blocks.
+ */
+function bootstrap_for_drupal_tlu_theme_suggestions_block_alter(&$suggestions, $variables) {
+  // Load theme suggestions for blocks from parent theme.
+  foreach ($suggestions as &$suggestion) {
+    $suggestion = str_replace('bootstrap_for_drupal_tlu_', 'bootstrap_for_drupal_', $suggestion);
+  }
+}

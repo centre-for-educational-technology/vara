@@ -1,0 +1,22 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "^4.6.1",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cli": "^2.3.0",
+    "sass": "^1.49.7",
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0"
+  },
+  "name": "bfd_tlu",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "sass": "./node_modules/gulp/bin/gulp.js sass",
+    "serve": "./node_modules/gulp/bin/gulp.js serve"
+  },
+  "author": "",
+  "license": "",
+  "description": ""
+}
