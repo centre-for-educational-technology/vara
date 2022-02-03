@@ -6,11 +6,27 @@
  */
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter for blocks.
+ * Implements hook_theme_suggestions_HOOK_alter() for blocks.
  */
 function bootstrap_for_drupal_tlu_theme_suggestions_block_alter(&$suggestions, $variables) {
   // Load theme suggestions for blocks from parent theme.
   foreach ($suggestions as &$suggestion) {
     $suggestion = str_replace('bootstrap_for_drupal_tlu_', 'bootstrap_for_drupal_', $suggestion);
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function bootstrap_for_drupal_tlu_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+  if (isset($form['actions']['delete']['#type']) && $form['actions']['delete']['#type'] === 'link') {
+    $form['actions']['delete']['#attributes']['class'][] = 'btn';
+    $form['actions']['delete']['#attributes']['class'][] = 'btn-outline-danger';
+  }
+
+  if (isset($form['actions']['cancel']['#type']) && $form['actions']['cancel']['#type'] === 'link') {
+    $form['actions']['cancel']['#attributes']['class'][] = 'btn';
+    $form['actions']['cancel']['#attributes']['class'][] = 'btn-outline-secondary';
   }
 }
