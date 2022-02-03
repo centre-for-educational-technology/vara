@@ -1,0 +1,22 @@
+uuid: a9cda07b-2172-4990-b4b7-c4c323fb1919
+langcode: et
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bootstrap_for_drupal
+_core:
+  default_config_hash: mV5IuJ86tSYefOsLFJuWLuBEnf_Hdrnexrtm5EWj7oU
+id: bootstrap_for_drupal_help
+theme: bootstrap_for_drupal
+region: content_before
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

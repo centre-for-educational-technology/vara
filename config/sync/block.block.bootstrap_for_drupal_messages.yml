@@ -1,0 +1,22 @@
+uuid: 87d2fdc6-209e-4979-827e-1b5c44d6c770
+langcode: et
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bootstrap_for_drupal
+_core:
+  default_config_hash: jAOvWX6YzdC4_YIHE3ZWwnwridio63yOButPfNoKBqw
+id: bootstrap_for_drupal_messages
+theme: bootstrap_for_drupal
+region: content_before
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

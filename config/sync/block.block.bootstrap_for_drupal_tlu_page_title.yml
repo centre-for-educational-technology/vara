@@ -1,0 +1,20 @@
+uuid: 81bef55a-e734-4c0b-a00d-c33f44845a5c
+langcode: et
+status: true
+dependencies:
+  theme:
+    - bootstrap_for_drupal_tlu
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: bootstrap_for_drupal_tlu_page_title
+theme: bootstrap_for_drupal_tlu
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: 3fa14b7d-6e94-4f01-aa65-684878ceac61
+langcode: et
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - bootstrap_for_drupal_tlu
+_core:
+  default_config_hash: rH6PpAn7-RScha1rGkohGAYSSh_1OVeZzioJPzPw6O4
+id: bootstrap_for_drupal_tlu_tools
+theme: bootstrap_for_drupal_tlu
+region: sidebar_left
+weight: -7
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tööriistad
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: eed649d5-173c-429b-a040-54ef638aa23b
+langcode: et
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bootstrap_for_drupal_tlu
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: bootstrap_for_drupal_tlu_powered
+theme: bootstrap_for_drupal_tlu
+region: footer_sub_right
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

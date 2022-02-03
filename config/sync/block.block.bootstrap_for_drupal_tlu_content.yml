@@ -1,0 +1,22 @@
+uuid: a3d9b4b4-19eb-4373-a13d-d61967637e9a
+langcode: et
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bootstrap_for_drupal_tlu
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: bootstrap_for_drupal_tlu_content
+theme: bootstrap_for_drupal_tlu
+region: content
+weight: -2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

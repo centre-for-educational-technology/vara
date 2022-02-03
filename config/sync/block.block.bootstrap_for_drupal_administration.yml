@@ -1,0 +1,27 @@
+uuid: 8912162c-d2c2-4fd6-8385-ddd208e4dd23
+langcode: et
+status: true
+dependencies:
+  config:
+    - system.menu.admin
+  module:
+    - system
+  theme:
+    - bootstrap_for_drupal
+_core:
+  default_config_hash: wMIcrwxIrDrmLNhw5UnyRIX8VXalY1FrO7ENEn1Lctk
+id: bootstrap_for_drupal_administration
+theme: bootstrap_for_drupal
+region: sidebar_left
+weight: -12
+provider: null
+plugin: 'system_menu_block:admin'
+settings:
+  id: 'system_menu_block:admin'
+  label: Administration
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

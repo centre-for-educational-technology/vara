@@ -1,0 +1,27 @@
+uuid: 7e76e957-e18f-4fa3-a551-b9e1f0b93023
+langcode: et
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - bootstrap_for_drupal_tlu
+_core:
+  default_config_hash: 8a31Ywc1t2zlddGd3bmDrFMefWqgSK2E02ceFdr-bfc
+id: bootstrap_for_drupal_tlu_account_menu
+theme: bootstrap_for_drupal_tlu
+region: nav_add
+weight: -5
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

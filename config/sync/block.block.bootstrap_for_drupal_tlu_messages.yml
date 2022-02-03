@@ -1,0 +1,22 @@
+uuid: 2fc975da-8b9c-4c92-a6ae-3dd84fcf0760
+langcode: et
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bootstrap_for_drupal_tlu
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: bootstrap_for_drupal_tlu_messages
+theme: bootstrap_for_drupal_tlu
+region: content_before
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

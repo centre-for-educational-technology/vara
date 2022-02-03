@@ -1,0 +1,27 @@
+uuid: fc771306-e42d-4cb4-b733-e687c1fdbc63
+langcode: et
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - bootstrap_for_drupal
+_core:
+  default_config_hash: JnKHEhNy8-NPHaAiua4-CHrmBAywNQHMhHh1mX7A1_E
+id: bootstrap_for_drupal_main_navigation
+theme: bootstrap_for_drupal
+region: nav_main
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: ''
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

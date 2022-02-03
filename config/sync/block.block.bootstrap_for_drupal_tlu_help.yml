@@ -1,0 +1,22 @@
+uuid: 37b8bd4e-b0d8-4b15-8229-d9b58497f257
+langcode: et
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bootstrap_for_drupal_tlu
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: bootstrap_for_drupal_tlu_help
+theme: bootstrap_for_drupal_tlu
+region: content_before
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

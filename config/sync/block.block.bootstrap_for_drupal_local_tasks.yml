@@ -1,0 +1,22 @@
+uuid: cac8e11e-4202-4c06-b686-71f7b7c00370
+langcode: et
+status: true
+dependencies:
+  theme:
+    - bootstrap_for_drupal
+_core:
+  default_config_hash: DstDufmVA-zFZOB8sI37I15Zl2rtrhEEVxn3JapwA00
+id: bootstrap_for_drupal_local_tasks
+theme: bootstrap_for_drupal
+region: content_before
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }
