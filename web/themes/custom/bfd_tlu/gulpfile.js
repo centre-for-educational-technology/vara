@@ -15,7 +15,7 @@ function browserSyncInit(cb) {
   browserSyncInitialised = true
 
   browserSync.init({
-    proxy: 'http://YOUR--DEV-URL.COM'
+    proxy: process.env.npm_config_url || process.env.npm_package_config_url
   })
   cb()
 }
