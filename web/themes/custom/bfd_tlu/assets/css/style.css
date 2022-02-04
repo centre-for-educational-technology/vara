@@ -17675,6 +17675,10 @@ h6 a:before {
 /* body {
   background: red !important;
 }*/
+#menu-add button a:hover:before,
+#menu-add ul:not(.contextual-links) a:hover:before {
+  background-color: #adb5bd;
+}
 #menu-add button a[href*=saml_login]:before,
 #menu-add ul:not(.contextual-links) a[href*=saml_login]:before {
   -webkit-mask: url("../icon/login.svg");
@@ -17682,9 +17686,23 @@ h6 a:before {
   -webkit-mask-size: cover;
           mask-size: cover;
 }
+#menu-add .block-language .dropdown .dropdown-menu {
+  background: #adb5bd;
+}
+#menu-add .block-language .dropdown .dropdown-menu:after {
+  border-bottom-color: #adb5bd;
+}
 #menu-add .block-language .dropdown .dropdown-menu #language-selector a[hreflang=et],
 #menu-add .block-language .dropdown .dropdown-menu ul:not(.contextual-links) a[hreflang=et] {
   background-image: url("../image/flags/Estonia.png");
+}
+
+#page-footer-sub a[href="https://www.drupal.org"]:hover {
+  opacity: 0.5;
+  color: #fff;
+}
+#page-footer-sub a[href="https://www.drupal.org"]:hover:after {
+  background-color: #fff;
 }
 
 .block.block-tagclouds {

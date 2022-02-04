@@ -39,6 +39,7 @@ $spacers: map-merge((0: 0, 1: ($spacer * .25), 2: ($spacer * .5), 3: $spacer, 4:
 // [ COLORS ]
 
 // CUSTOM COLORS
+$tlu-red: #b71234;
 
 // SOCIAL MEDIA COLORS
 $instagram: #e4405f;
@@ -56,7 +57,7 @@ $bootstrap: #563d7c;
 
 // BOOTSTRAP COLORS
 //$primary: #33a1fd;
-$primary: #b71234;
+$primary: $tlu-red;
 $secondary: #373F51;
 $white: #fff;
 $blue: #007bff;

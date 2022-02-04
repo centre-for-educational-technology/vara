@@ -12,6 +12,10 @@
   #menu-add {
     button a,
     ul:not(.contextual-links) a {
+      // hoover effect
+      &:hover:before {
+        background-color: $gray-500;
+      }
       // SAML login icon
       &[href*='saml_login'] {
         &:before {
@@ -26,6 +30,10 @@
       // dropdown
       .dropdown {
         .dropdown-menu {
+          background: $gray-500;
+          &:after {
+            border-bottom-color: $gray-500;
+          }
           //Flags
           #language-selector a,
           ul:not(.contextual-links) a {
@@ -37,8 +45,23 @@
       }
     }
   }
+  //////////////////////////////////////////////////////////////////////////////
+  // [ BOOTSTRAP & DRUPAL LINK ICON ]
+  #page-footer-sub {
+    a[href="https://www.drupal.org"] {
+      &:hover {
+        opacity: 0.5;
+        color: $white;
+      }
+      &:hover:after {
+        background-color: $white;
+      }
+    }
+  }
 }
 
+//////////////////////////////////////////////////////////////////////////////
+// [ TAG CLOUDS BLOCK ]
 .block {
   &.block-tagclouds {
     word-break: break-all;
@@ -59,7 +82,8 @@
     }
   }
 }
-
+//////////////////////////////////////////////////////////////////////////////
+// [ NODE FORM ]
 .node-form {
   .form-wrapper {
     .form-item {
