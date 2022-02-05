@@ -112,3 +112,5 @@
 
 composer.phar
 /web/modules/devel
+
+.DS_Store
