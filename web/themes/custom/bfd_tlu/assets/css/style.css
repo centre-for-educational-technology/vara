@@ -17718,3 +17718,10 @@ h6 a:before {
 .node-form .form-wrapper .form-item .description {
   color: #adb5bd;
 }
+
+.legal-pages a.legal-page {
+  font-size: 80%;
+}
+.legal-pages a.legal-page:not(:first-child) {
+  margin-left: 0.5em;
+}

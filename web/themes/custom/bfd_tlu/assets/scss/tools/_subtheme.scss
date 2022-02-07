@@ -93,3 +93,15 @@
     }
   }
 }
+
+.legal-pages {
+  a {
+    &.legal-page {
+      font-size: 80%;
+
+      &:not(:first-child) {
+        margin-left: 0.5em;
+      }
+    }
+  }
+}

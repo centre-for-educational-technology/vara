@@ -1,0 +1,20 @@
+uuid: c2da6ed6-eee4-40e4-86e5-5e4e8fe28d8c
+langcode: et
+status: true
+dependencies:
+  module:
+    - tlu_h5p
+  theme:
+    - bootstrap_for_drupal_tlu
+id: legal_pages
+theme: bootstrap_for_drupal_tlu
+region: footer_sub_left
+weight: 0
+provider: null
+plugin: tlu_h5p_legal_pages
+settings:
+  id: tlu_h5p_legal_pages
+  label: 'Legal pages'
+  label_display: '0'
+  provider: tlu_h5p
+visibility: {  }
