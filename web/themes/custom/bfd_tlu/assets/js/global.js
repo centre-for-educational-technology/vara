@@ -84,10 +84,6 @@
 
   // [ TOOLTIP ]
   $(() => {
-    // Make views table headers that allow ordering use tooltips
-    $('table.views-table.views-view-table > thead > tr > th > a[href*="?order="][title]')
-      .attr('data-toggle', 'tooltip');
-
     $('[data-toggle="tooltip"]').tooltip({
       delay: {
         show: 100,
