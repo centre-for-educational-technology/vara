@@ -37,6 +37,8 @@ author. See issue [78](https://github.com/centre-for-educational-technology/tlu-
 [79](https://github.com/centre-for-educational-technology/tlu-h5p/issues/79) for more details.
 - Allowed any authenticated user to change the **published** status. See issue
 [85](https://github.com/centre-for-educational-technology/tlu-h5p/issues/85) for more details.
+- Partial implementation of legal links, mostly a block that points to the addresses that should be used. See issue
+[80](https://github.com/centre-for-educational-technology/tlu-h5p/issues/80) for more details.
 - Added a few more translations.
 - Updated a few modules and dependencies.
 - Also includes a few more tunes and fixes here and there.
