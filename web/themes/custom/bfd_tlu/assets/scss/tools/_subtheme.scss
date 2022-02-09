@@ -93,7 +93,8 @@
     }
   }
 }
-
+//////////////////////////////////////////////////////////////////////////////
+// [ LEGAL PAGES BLOCK ]
 .legal-pages {
   a {
     &.legal-page {
@@ -101,6 +102,18 @@
 
       &:not(:first-child) {
         margin-left: 0.5em;
+      }
+    }
+  }
+}
+// [ COOKIE POLICY DIALOG ]
+#cookie-policy {
+  &.modal {
+    .modal-content {
+      .modal-body {
+        a {
+          color: $primary;
+        }
       }
     }
   }

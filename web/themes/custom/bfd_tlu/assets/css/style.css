@@ -17725,3 +17725,7 @@ h6 a:before {
 .legal-pages a.legal-page:not(:first-child) {
   margin-left: 0.5em;
 }
+
+#cookie-policy.modal .modal-content .modal-body a {
+  color: #b71234;
+}

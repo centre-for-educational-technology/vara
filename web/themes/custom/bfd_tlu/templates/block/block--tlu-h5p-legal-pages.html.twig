@@ -1,0 +1,68 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{%
+  set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+  <!-- MODAL BOX -->
+  {{ attach_library('bootstrap_for_drupal_tlu/cookie-policy') }}
+  <div class="modal fade show" id="cookie-policy" role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="cookie-policy-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header px-4 border-0">
+          <h5 class="modal-title text-secondary" id="cookie-policy-label">{{ 'Cookie Policy'|t }}</h5>
+          <button aria-label="{{ 'Close'|t }}" class="close" data-dismiss="modal" type="button">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body px-4 py-0 text-justify text-secondary">
+          {{ 'This website uses cookies to ensure you get the best possible online experience. By continuing to use our website, <a href=":url" target="_blank">you agree to the use of cookies</a>.'|t({ ':url': [content.content.privacy_policy['#attributes']['data-url'], '?bypass-cookie-policy=true']|join, }) }}
+        </div>
+        <div class="modal-footer  px-4 border-0 pt-0/home">
+          <div class="btn-group" role="group" aria-label="Cookie Policy dialog buttons">
+            <button class="btn btn-secondary" data-dismiss="modal" type="button">{{ 'Close'|t }}</button>
+            <button class="btn btn-primary" type="button">{{ 'Agree and proceed'|t }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL BOX -->
+</div>

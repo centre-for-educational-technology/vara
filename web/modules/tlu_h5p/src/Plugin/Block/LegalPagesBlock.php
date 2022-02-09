@@ -20,6 +20,8 @@ class LegalPagesBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
+    $privacyPolicyUrl = Url::fromUri('internal:/privacy-policy');
+
     $build['content'] = [
       '#type' => 'container',
       '#attributes' => [
@@ -28,10 +30,11 @@ class LegalPagesBlock extends BlockBase {
     ];
     $build['content']['privacy_policy'] = [
       '#type' => 'link',
-      '#url' => Url::fromUri('internal:/privacy-policy'),
+      '#url' => $privacyPolicyUrl,
       '#title' => $this->t('Privacy Policy'),
       '#attributes' => [
         'class' => ['legal-page', 'privacy-policy'],
+        'data-url' => $privacyPolicyUrl->toString(),
       ],
     ];
     $build['content']['terms_and_conditions'] = [
