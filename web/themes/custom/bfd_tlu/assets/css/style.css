@@ -17705,6 +17705,13 @@ h6 a:before {
   background-color: #fff;
 }
 
+.alert.alert-primary:before {
+  background-color: #b71234;
+}
+.alert strong {
+  font-weight: bold;
+}
+
 .block.block-tagclouds {
   word-break: break-all;
 }

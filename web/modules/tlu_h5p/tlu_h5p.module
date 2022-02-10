@@ -90,11 +90,9 @@ function tlu_h5p_taxonomy_term_view(array &$build, \Drupal\Core\Entity\EntityInt
     }
 
     $build['filter_by_plain_text'] = [
-      '#plain_text' => t('Materials for tag: @tag', [
+      '#markup' => t('Materials for tag: <strong>@tag</strong>', [
         '@tag' => $entity->getName(),
       ]),
-      '#prefix' => '<strong>',
-      '#suffix' => '</strong>',
     ];
   }
 }

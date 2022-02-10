@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2022-02-07 16:35+0200\n"
-"PO-Revision-Date: 2022-02-07 16:35+0200\n"
+"POT-Creation-Date: 2022-02-10 12:12+0200\n"
+"PO-Revision-Date: 2022-02-10 12:12+0200\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -53769,7 +53769,8 @@ msgid ""
 "on your debug file format and how it is displayed."
 msgstr ""
 msgid "Materials for tag: @tag"
-msgstr ""
+msgstr "Материалы с ключевым словом: @tag"
+
 msgid "highlight.js library"
 msgstr ""
 msgid "D3.js library"
@@ -55601,5 +55602,124 @@ msgstr "Конфиденциальность"
 
 msgid "Terms and Conditions"
 msgstr "Пользовательское соглашение"
+
+msgid "Cookie Policy"
+msgstr ""
+msgid "We use cookies"
+msgstr ""
+msgid "Agree and close"
+msgstr ""
+msgid ""
+"This website uses cookies to ensure you get the best possible online "
+"experience. By continuing to use our website, <a href=\"@url\">you "
+"agree to the use of cookies</a>."
+msgstr ""
+msgid ""
+"This website uses cookies to ensure you get the best possible online "
+"experience. By continuing to use our website, <a href=\"@url\" "
+"target=\"_blank\">you agree to the use of cookies</a>."
+msgstr ""
+msgid ""
+"This website uses cookies to ensure you get the best possible online "
+"experience. By continuing to use our website, <a href=\":url\" "
+"target=\"_blank\">you agree to the use of cookies</a>."
+msgstr ""
+msgid "Agree and proceed"
+msgstr ""
+msgid "Logout"
+msgstr "Выход"
+
+msgid "Missing"
+msgstr "Отсутствует"
+
+msgid "Execute PHP Code"
+msgstr "Выполнить PHP код"
+
+msgid "All types"
+msgstr "Все типы"
+
+msgid "Rebuild menu"
+msgstr "Перестроить меню"
+
+msgid "Flush all caches"
+msgstr "Очистить все кэши"
+
+msgid "Menu depth"
+msgstr "Глубина меню"
+
+msgid "Rebuild theme registry"
+msgstr "Перестроить реестр темы"
+
+msgid "All caches cleared."
+msgstr "Все кэши очищены."
+
+msgid "Admin Toolbar"
+msgstr "Панель администратора"
+
+msgid "Admin Toolbar Tools"
+msgstr "Инструменты панели администратора"
+
+msgid "Static caches"
+msgstr "Статические кеши"
+
+msgid "CSS and JavaScript cache cleared."
+msgstr "Кэш CSS и JS очищен."
+
+msgid "Admin Toolbar Extra Tools"
+msgstr ""
+"Дополнительные инструменты панели "
+"администратора"
+
+msgid "Uninstall module"
+msgstr "Удалить модуль"
+
+msgid "Flush plugins cache"
+msgstr "Очистить кэш плагинов"
+
+msgid "Flush static cache"
+msgstr "Очистить кэш статики"
+
+msgid "Flush routing and links cache"
+msgstr "Очистить кэш путей и ссылок"
+
+msgid "Flush render cache"
+msgstr "Очистить кэш рендера"
+
+msgid "Render cache cleared."
+msgstr "Рендер-кэш очищен."
+
+msgid "Flush views cache"
+msgstr "Очистить кэш представлений"
+
+msgid ""
+"To use Admin Toolbar Extra Tools just install it like any other "
+"module. There is no other configuration required."
+msgstr ""
+"Для того чтобы использовать "
+"дополнительные инструменты панели "
+"администратора просто установите "
+"модуль, как и любой другой. Никак "
+"других конфигураций не требуется."
+
+msgid "Flush twig cache"
+msgstr "Очистить кэш twig"
+
+msgid "Twig cache cleared."
+msgstr "Кэш twig очищен."
+
+msgid "Admin Toolbar quick search"
+msgstr "Быстрый поиск в Admin Toolbar"
+
+msgid "Flush CSS and JavaScript"
+msgstr "Очистить CSS и JavaScript"
+
+msgid "Configure the Admin Toolbar module."
+msgstr ""
+msgid "Save and go to list"
+msgstr ""
+msgid "Materials for tag: <strong>@tag</strong>"
+msgstr ""
+"Материалы с ключевым словом: "
+"<strong>@tag</strong>"
 
 
