@@ -5,6 +5,7 @@ global-styling:
       assets/css/style.css: {}
   js:
     assets/js/global.js: {}
+    assets/js/main-menu.js: {}
 cookie-policy:
   version: 1.x
   js:
