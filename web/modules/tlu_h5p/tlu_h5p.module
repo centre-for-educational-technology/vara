@@ -111,3 +111,14 @@ function tlu_h5p_form_node_form_alter(array &$form, \Drupal\Core\Form\FormStateI
     $form['status']['#access'] = TRUE;
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function tlu_h5p_preprocess_node(&$variables) {
+  if (!empty($variables['node']) && $variables['node']->getType() === 'material') {
+    if (!$variables['node']->get('field_listed')->value) {
+      $variables['attributes']['class'][] = 'material-unlisted';
+    }
+  }
+}

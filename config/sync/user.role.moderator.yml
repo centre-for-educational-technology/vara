@@ -6,6 +6,7 @@ dependencies:
     - node.type.material
   module:
     - node
+    - tlu_h5p
 id: moderator
 label: Moderaator
 weight: -7
@@ -13,3 +14,4 @@ is_admin: null
 permissions:
   - 'delete any material content'
   - 'edit any material content'
+  - 'view unlisted materials'
