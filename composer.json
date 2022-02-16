@@ -102,7 +102,8 @@
         },
         "patches": {
             "drupal/h5p": {
-                "Use display name instead of username for initial author in metadata": "patches/h5p-metadata-display-name-as-default-author.patch"
+                "Use display name instead of username for initial author in metadata": "patches/h5p-metadata-display-name-as-default-author.patch",
+                "Show max upload file size in H5P package upload": "patches/h5p-hub-show-upload-max-filesize.patch"
             }
         }
     }
