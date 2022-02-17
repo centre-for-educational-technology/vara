@@ -1,0 +1,56 @@
+diff --git a/modules/h5peditor/scripts/application.js b/modules/h5peditor/scripts/application.js
+index 1b23ae0..74f0ca6 100644
+--- a/modules/h5peditor/scripts/application.js
++++ b/modules/h5peditor/scripts/application.js
+@@ -21,7 +21,7 @@
+     H5PEditor.basePath = drupalSettings.h5peditor.libraryPath;
+     H5PEditor.contentLanguage = drupalSettings.h5peditor.language;
+     mapProperties(H5PEditor, drupalSettings.h5peditor,
+-      ['contentId', 'fileIcon', 'relativeUrl', 'contentRelUrl', 'editorRelUrl', 'apiVersion', 'copyrightSemantics', 'metadataSemantics', 'assets']);
++      ['contentId', 'fileIcon', 'relativeUrl', 'contentRelUrl', 'editorRelUrl', 'apiVersion', 'copyrightSemantics', 'metadataSemantics', 'assets', 'uploadMaxFilesize']);
+   };
+ 
+   // Init editors
+diff --git a/modules/h5peditor/src/H5PEditor/H5PEditorUtilities.php b/modules/h5peditor/src/H5PEditor/H5PEditorUtilities.php
+index 7ca966a..4560a3f 100644
+--- a/modules/h5peditor/src/H5PEditor/H5PEditorUtilities.php
++++ b/modules/h5peditor/src/H5PEditor/H5PEditorUtilities.php
+@@ -2,6 +2,7 @@
+ 
+ namespace Drupal\h5peditor\H5PEditor;
+ 
++use Drupal\Component\Utility\Environment;
+ use Drupal\h5peditor;
+ use Drupal\h5p\H5PDrupal\H5PDrupal;
+ use Drupal\Core\Url;
+@@ -51,7 +52,8 @@ class H5PEditorUtilities {
+       'metadataSemantics' => $contentValidator->getMetadataSemantics(),
+       'assets'             => self::getEditorAssets(),
+       'apiVersion'         => \H5PCore::$coreApi,
+-      'language' => \Drupal::languageManager()->getCurrentLanguage()->getId()
++      'language' => \Drupal::languageManager()->getCurrentLanguage()->getId(),
++      'uploadMaxFilesize' => Environment::getUploadMaxSize(),
+     ];
+ 
+     return $settings;
+diff --git a/vendor/h5p/h5p-editor/scripts/h5peditor-selector-hub.js b/vendor/h5p/h5p-editor/scripts/h5peditor-selector-hub.js
+index 03326c9..82709f5 100644
+--- a/vendor/h5p/h5p-editor/scripts/h5peditor-selector-hub.js
++++ b/vendor/h5p/h5p-editor/scripts/h5peditor-selector-hub.js
+@@ -38,8 +38,15 @@ ns.SelectorHub = function (libraries, selectedLibrary, changeLibraryDialog) {
+     state.expanded = false;
+   }
+ 
++  // Append maximum file size to file upload placeholder
++  var h5pEditorLanguageCoreClone = H5P.cloneObject(H5PEditor.language.core, true)
++
++  if (H5PEditor.uploadMaxFilesize && h5pEditorLanguageCoreClone.hasOwnProperty('uploadPlaceholder')) {
++    h5pEditorLanguageCoreClone.uploadPlaceholder += ' (' + Math.floor(H5PEditor.uploadMaxFilesize / 1048576) + ' MB)';
++  }
++
+   // Initialize hub client
+-  this.client = new H5P.HubClient(state, H5PEditor.language.core);
++  this.client = new H5P.HubClient(state, h5pEditorLanguageCoreClone);
+ 
+   // Default to nothing selected and empty params
+   this.currentLibrary = selectedLibrary;
