@@ -33,3 +33,19 @@ vendor/bin/drush locale-import --override=none ru <full-path-to-drupal>/config/l
 vendor/bin/drush sset system.maintenance_mode 0
 vendor/bin/drush cr
 ```
+
+## 1.1.1 - 17.02.2022
+
+NB! Please make sure that **production** branch is being used.
+
+```shell
+vendor/bin/drush sset system.maintenance_mode 1
+git pull
+composer install --no-dev
+vendor/bin/drush cr
+vendor/bin/drush updatedb
+vendor/bin/drush cim
+./scripts/import-all-languages.sh
+vendor/bin/drush sset system.maintenance_mode 0
+vendor/bin/drush cr
+```

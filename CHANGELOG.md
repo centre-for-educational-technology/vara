@@ -42,3 +42,22 @@ author. See issue [78](https://github.com/centre-for-educational-technology/tlu-
 - Added a few more translations.
 - Updated a few modules and dependencies.
 - Also includes a few more tunes and fixes here and there.
+
+## 1.1.1 - 17.02.2022
+
+- Updated Drupal Core to version 9.3.6.
+- Added several convenience shell scripts for constantly repeated activities. Updated instructions in README file to use
+those scripts.
+- Added Cookie Policy modal and logic. See issue
+[80](https://github.com/centre-for-educational-technology/tlu-h5p/issues/80) for mode details.
+- Changed positions of material form fields.
+- Changed visuals for tags taxonomy term view and updated translations. Please see
+[this](https://github.com/centre-for-educational-technology/tlu-h5p/commit/9eaed1e254198f65c54e1ddddcd569db1e45111e)
+commit for more details.
+- Made sure that active visuals for main menu work even when query string or hash are present. See issue
+[104](https://github.com/centre-for-educational-technology/tlu-h5p/issues/104) for more details.
+- Added and activated [Admin toolbar](https://www.drupal.org/project/admin_toolbar) module.
+- Added permission to view unlisted materials. Not yet used anywhere. See issue
+[89](https://github.com/centre-for-educational-technology/tlu-h5p/issues/89) for more details.
+- H5P package upload input will now show maximum file upload size. See issue
+[94](https://github.com/centre-for-educational-technology/tlu-h5p/issues/94) for more details.
