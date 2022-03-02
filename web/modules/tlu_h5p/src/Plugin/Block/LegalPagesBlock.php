@@ -20,7 +20,10 @@ class LegalPagesBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $privacyPolicyUrl = Url::fromUri('internal:/privacy-policy');
+    $options = [
+      'language' => \Drupal::languageManager()->getCurrentLanguage(),
+    ];
+    $privacyPolicyUrl = Url::fromUri("internal:/privacy-policy", $options);
 
     $build['content'] = [
       '#type' => 'container',
@@ -39,7 +42,7 @@ class LegalPagesBlock extends BlockBase {
     ];
     $build['content']['terms_and_conditions'] = [
       '#type' => 'link',
-      '#url' => Url::fromUri('internal:/terms-and-conditions'),
+      '#url' => Url::fromUri('internal:/terms-and-conditions', $options),
       '#title' => $this->t('Terms and Conditions'),
       '#attributes' => [
         'class' => ['legal-page', 'terms-and-conditions'],
