@@ -20,6 +20,16 @@
   * Read documentation for the [H5P MathInput](https://git.drupalcode.org/project/h5p_math_input) module or go directly
   to the [H5P documentation](https://h5p.org/mathematical-expressions), download the library package and upload that
   through the library admin page.
+* Override OpenID Connect HarID configurations
+  * Make sure that you have [registered](https://harid.ee/et/pages/dev-info) your service with
+[HarID](https://harid.ee/).
+  * Override `client_id` and `client_secret` configuration for HarID, because the default synchronised configuration has
+values of **none** and would be available in the public repository. Configuration overrides will stay private and would
+never be overwritten by the configuration synchronisation process. Place these lines at the end of `settings.php` file:
+```php
+$config['openid_connect.settings.harid']['settings']['client_id'] = '<CLIENT-ID-VALUE>';
+$config['openid_connect.settings.harid']['settings']['client_secret'] = '<CLIENT-SECRET-VALUE>';
+```
 
 ### Update
 

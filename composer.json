@@ -24,6 +24,7 @@
         "drupal/core-recommended": "^9.1",
         "drupal/h5p": "^2.0.0@alpha",
         "drupal/h5p_math_input": "^1.0",
+        "drupal/openid_connect_harid": "^1.3",
         "drupal/search_api": "^1.19",
         "drupal/tagclouds": "^2.0",
         "drush/drush": "^11.0"
@@ -103,6 +104,9 @@
             "drupal/h5p": {
                 "Use display name instead of username for initial author in metadata": "patches/h5p-metadata-display-name-as-default-author.patch",
                 "Add file upload maximum size to hub input placeholder": "patches/h5p-hub-file-upload-maximum-size.patch"
+            },
+            "h5p/h5p-editor": {
+                "Fix PHP 8 warning": "patches/h5p-editor-php-8-warning.patch"
             }
         }
     }

@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: bTrA2nvu0LducM2O2BcUpOb-Tiwng_n3Cdk6stFiFVI
+langcode: et
+enabled: true
+settings:
+  redirect_url: ''
+  client_id: none
+  client_secret: none
+  require_strong_session: true
+  require_personal_code: false
+  use_test_idp: false

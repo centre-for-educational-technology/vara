@@ -9,7 +9,7 @@ dependencies:
 id: bootstrap_for_drupal_tlu_language_swticher
 theme: bootstrap_for_drupal_tlu
 region: nav_add
-weight: -6
+weight: -5
 provider: null
 plugin: 'language_block:language_interface'
 settings:
