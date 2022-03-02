@@ -2,8 +2,8 @@ _core:
   default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
 langcode: et
 uuid: ca6743de-d1c6-4775-b2cb-faace125f90c
-name: Õppevara
-mail: oppevara@tlu.ee
+name: Vara
+mail: vara@h5p.ee
 slogan: ''
 page:
   403: ''

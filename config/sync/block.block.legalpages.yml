@@ -1,4 +1,4 @@
-uuid: c2da6ed6-eee4-40e4-86e5-5e4e8fe28d8c
+uuid: 4c8b6763-5b74-4ee7-9867-c7c5b7b673e9
 langcode: et
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - tlu_h5p
   theme:
     - bootstrap_for_drupal_tlu
-id: legal_pages
+id: legalpages
 theme: bootstrap_for_drupal_tlu
 region: footer_sub_left
 weight: 0

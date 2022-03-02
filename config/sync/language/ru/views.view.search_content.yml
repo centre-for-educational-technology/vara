@@ -1,4 +1,5 @@
 label: 'Поиск материалов'
+description: 'Страница поиска материалов'
 display:
   default:
     display_title: Основной
@@ -28,9 +29,6 @@ display:
         search_api_language:
           expose:
             label: Язык
-        field_unit:
-          expose:
-            label: Подразделение
         field_tags:
           expose:
             label: 'Ключевые слова'
@@ -43,4 +41,3 @@ display:
     display_options:
       menu:
         title: 'Поиск материалов'
-description: 'Страница поиска материалов'
