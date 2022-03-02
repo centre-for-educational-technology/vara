@@ -1,16 +1,16 @@
-uuid: 9e7d46bd-2174-4c22-a642-73a5abf1f325
-langcode: en
+uuid: aecb5cbd-4748-405b-a69d-39e88da0f816
+langcode: et
 status: true
 dependencies:
   config:
-    - node.type.page
+    - node.type.translatable_page
   module:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
-id: node.page
+    enabled: true
+id: node.translatable_page
 target_entity_type_id: node
-target_bundle: page
+target_bundle: translatable_page
 default_langcode: site_default
 language_alterable: false

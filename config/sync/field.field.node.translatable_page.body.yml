@@ -1,0 +1,23 @@
+uuid: 1c0342b1-6b8d-469e-96d8-6010ef613aba
+langcode: et
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.translatable_page
+  module:
+    - text
+id: node.translatable_page.body
+field_name: body
+entity_type: node
+bundle: translatable_page
+label: Sisu
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

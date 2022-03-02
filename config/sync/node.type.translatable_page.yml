@@ -1,0 +1,18 @@
+uuid: c8985994-2515-4035-b5f9-5996f2b07d75
+langcode: et
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Tõlgitav leht'
+type: translatable_page
+description: '<em>Tõlgitvaid lehti</em> võib kasutada muutumatu sisu jaoks, nagu näiteks leht ''Meist lähemalt''.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
