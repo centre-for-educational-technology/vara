@@ -17,3 +17,4 @@ h5p_hub_is_enabled: 1
 h5p_send_usage_statistics: 1
 h5p_site_uuid: 4ffe974a-3548-4318-8816-dfa9ba13ebbf
 h5p_first_runnable_saved: 1
+h5p_site_type: internet
