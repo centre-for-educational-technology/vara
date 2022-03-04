@@ -50,7 +50,7 @@ tips:
   search-api-index-fields-type:
     id: search-api-index-fields-type
     plugin: text
-    label: Type
+    label: Liik
     weight: 6
     selector: '.details-wrapper:nth(0) table thead th:nth(3)'
     body: 'The data type to use when indexing the field. Determines how a field can be used in searches. For information on the available types, see the <a href="#search-api-data-types-table">"Data types" box</a> at the bottom of the page.'

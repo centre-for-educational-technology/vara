@@ -30,6 +30,15 @@ never be overwritten by the configuration synchronisation process. Place these l
 $config['openid_connect.settings.harid']['settings']['client_id'] = '<CLIENT-ID-VALUE>';
 $config['openid_connect.settings.harid']['settings']['client_secret'] = '<CLIENT-SECRET-VALUE>';
 ```
+* Override H5P Challenge configurations
+  * Sign up for a [reCAPTCHA](https://developers.google.com/recaptcha/) API key pair. You would need to go with the
+**V2 visible** option.
+  * Override `recaptcha_site_key` and `recaptcha_secret_key` configuration. Default synchronised configuration has
+values of **none** and would be available in the public repository. Place these lines at the end of `settings.php` file:
+```php
+$config['h5p_challenge.config']['recaptcha_site_key'] = '<SITE-KEY>';
+$config['h5p_challenge.config']['recaptcha_secret_key'] = '<SITE-SECRET>';
+```
 
 ### Update
 
