@@ -42,7 +42,8 @@
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "simplesamlphp/composer-module-installer": true
+            "simplesamlphp/composer-module-installer": true,
+            "phpstan/extension-installer": true
         }
     },
     "extra": {
@@ -110,5 +111,11 @@
                 "Fix PHP 8 warning": "patches/h5p-editor-php-8-warning.patch"
             }
         }
+    },
+    "require-dev": {
+        "mglaman/phpstan-drupal": "^1.1",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan": "^1.4",
+        "phpstan/phpstan-deprecation-rules": "^1.0"
     }
 }
