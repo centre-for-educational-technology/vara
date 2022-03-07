@@ -32,8 +32,10 @@ module:
   language: 0
   link: 0
   locale: 0
+  mailsystem: 0
   menu_link_content: 0
   menu_ui: 0
+  mimemail: 0
   node: 0
   openid_connect: 0
   openid_connect_harid: 0

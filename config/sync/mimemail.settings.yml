@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: rpfRQVoEn2ZWd_lw-iULKPiuina5CqcmzXWlz1OjTwM
+langcode: et
+name: Vara
+mail: vara@h5p.ee
+simple_address: false
+sitestyle: false
+textonly: true
+linkonly: false
+user_plaintext_field: ''
+format: plain_text
+preserve_class: false
+advanced:
+  incoming: false
+  key: k-jhvHJ7YUvkap084a-FRVVvxVGAVcbAEd8qnSxazrY
