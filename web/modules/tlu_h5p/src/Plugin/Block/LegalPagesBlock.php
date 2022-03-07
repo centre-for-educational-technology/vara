@@ -61,7 +61,7 @@ final class LegalPagesBlock extends BlockBase implements ContainerFactoryPluginI
     $options = [
       'language' => $this->languageManager->getCurrentLanguage(),
     ];
-    $privacyPolicyUrl = Url::fromUri("internal:/privacy-policy", $options);
+    $termsAndConditionsUrl = Url::fromUri('internal:/terms-and-conditions', $options);
 
     $build['content'] = [
       '#type' => 'container',
@@ -69,21 +69,13 @@ final class LegalPagesBlock extends BlockBase implements ContainerFactoryPluginI
         'class' => ['legal-pages'],
       ],
     ];
-    $build['content']['privacy_policy'] = [
-      '#type' => 'link',
-      '#url' => $privacyPolicyUrl,
-      '#title' => $this->t('Privacy Policy'),
-      '#attributes' => [
-        'class' => ['legal-page', 'privacy-policy'],
-        'data-url' => $privacyPolicyUrl->toString(),
-      ],
-    ];
     $build['content']['terms_and_conditions'] = [
       '#type' => 'link',
-      '#url' => Url::fromUri('internal:/terms-and-conditions', $options),
+      '#url' => $termsAndConditionsUrl,
       '#title' => $this->t('Terms and Conditions'),
       '#attributes' => [
         'class' => ['legal-page', 'terms-and-conditions'],
+        'data-url' => $termsAndConditionsUrl->toString(),
       ],
     ];
     return $build;
