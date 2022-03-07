@@ -2,21 +2,52 @@
 
 namespace Drupal\tlu_h5p\Commands;
 
+use Drupal\Core\Database\Connection;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drush\Commands\DrushCommands;
 
 
 class TluH5pCommands extends DrushCommands
 {
+
+  /**
+   * Database connection
+   *
+   * @var \Drupal\Core\Database\Connection
+   */
+  protected $database;
+
+  /**
+   * Entity type manager
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
+
+  /**
+   * Constructs a new command.
+   *
+   * @param \Drupal\Core\Database\Connection $connection
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
+   */
+  public function __construct(Connection $connection, EntityTypeManagerInterface $entityTypeManager) {
+    $this->database = $connection;
+    $this->entityTypeManager = $entityTypeManager;
+  }
+
   /**
    * Reassign all content from one account to the other.
    *
    * @command tlu-h5p:reassign
    *
    * @param string $from Username to reassign content from
-   * @param string $to   Username to reassign content to
+   * @param string $to Username to reassign content to
+   *
    * @aliases tlu-h5p-reassign
    * @usage tlu-h5p:reassign username1 username2
-   *   Reassign all the content created by username1 and assign that to username2
+   *   Reassign all the content created by username1 and assign that to
+   *   username2
+   * @throws \Exception
    */
   public function reassign(string $from, string $to) {
     $fromAccount = user_load_by_name($from);
@@ -36,7 +67,8 @@ class TluH5pCommands extends DrushCommands
     ]))) {
       // Reassign nodes (current revisions).
       module_load_include('inc', 'node', 'node.admin');
-      $nodes = \Drupal::entityQuery('node')
+      $nodes = $this->entityTypeManager->getStorage('node')
+        ->getQuery()
         ->condition('uid', $fromAccount->id())
         ->execute();
       node_mass_update($nodes, [
@@ -44,7 +76,7 @@ class TluH5pCommands extends DrushCommands
       ], NULL, TRUE);
 
       // Reassign old revisions.
-      \Drupal::database()
+      $this->database
         ->update('node_field_revision')
         ->fields([
           'uid' => $toAccount->id(),

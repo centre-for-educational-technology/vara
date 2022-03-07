@@ -3,7 +3,10 @@
 namespace Drupal\tlu_h5p\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Language\LanguageManagerInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Url;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides a legal pages block.
@@ -14,14 +17,49 @@ use Drupal\Core\Url;
  *   category = @Translation("Custom")
  * )
  */
-class LegalPagesBlock extends BlockBase {
+final class LegalPagesBlock extends BlockBase implements ContainerFactoryPluginInterface {
+
+  /**
+   * Language manager
+   *
+   * @var \Drupal\Core\Language\LanguageManagerInterface
+   */
+  protected $languageManager;
+
+  /**
+   * @param array $configuration
+   * @param $plugin_id
+   * @param $plugin_definition
+   * @param \Drupal\Core\Language\LanguageManagerInterface $languageManager
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, LanguageManagerInterface $languageManager) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->languageManager = $languageManager;
+  }
+
+  /**
+   * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+   * @param array $configuration
+   * @param $plugin_id
+   * @param $plugin_definition
+   *
+   * @return \Drupal\tlu_h5p\Plugin\Block\LegalPagesBlock|static
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('language_manager')
+    );
+  }
 
   /**
    * {@inheritdoc}
    */
   public function build() {
     $options = [
-      'language' => \Drupal::languageManager()->getCurrentLanguage(),
+      'language' => $this->languageManager->getCurrentLanguage(),
     ];
     $privacyPolicyUrl = Url::fromUri("internal:/privacy-policy", $options);
 
