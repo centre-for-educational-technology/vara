@@ -61,9 +61,13 @@
   //////////////////////////////////////////////////////////////////////////////
   // [ BOX ]
   .alert {
+    &.alert-primary {
+      @include alert-variant(theme-color-level("success", -10), theme-color-level("success", -9), theme-color-level("success", 6));
+    }
+
     // [ ICON ]
     &.alert-primary:before {
-      background-color: $primary;
+      background-color: $success;
     }
   }
 }
