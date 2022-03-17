@@ -4,3 +4,7 @@ Commands assume that they are running within the Drupal root directory, use glob
 locally installed Drush dependency.
 
 **NB! It is mandatory to make a backup of both the database and all Drupal files before upgrading!**
+
+## 1.0.4 - 17.03.2022
+
+- Standard code update + configuration import
