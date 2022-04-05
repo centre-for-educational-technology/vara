@@ -23,6 +23,7 @@ module:
   file: 0
   filter: 0
   h5p: 0
+  h5p_analytics: 0
   h5p_challenge: 0
   h5p_math_input: 0
   h5peditor: 0
