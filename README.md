@@ -39,6 +39,13 @@ values of **none** and would be available in the public repository. Place these 
 $config['h5p_challenge.config']['recaptcha_site_key'] = '<SITE-KEY>';
 $config['h5p_challenge.config']['recaptcha_secret_key'] = '<SITE-SECRET>';
 ```
+* Override H5P Analytics configurations
+  * Override `xapi_endpoint`, `key` and `secret` configuration.
+```php
+$config['h5p_challenge.config']['xapi_endpoint'] = '<URL>';
+$config['h5p_challenge.config']['key'] = '<KEY>';
+$config['h5p_challenge.config']['secret'] = '<SECRET>';
+```
 
 ### Update
 

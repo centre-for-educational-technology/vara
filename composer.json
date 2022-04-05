@@ -23,6 +23,7 @@
         "drupal/core-project-message": "^9.1",
         "drupal/core-recommended": "^9.1",
         "drupal/h5p": "^2.0.0@alpha",
+        "drupal/h5p_analytics": "^1.0@RC",
         "drupal/h5p_challenge": "^1.0",
         "drupal/h5p_math_input": "^1.0",
         "drupal/mailsystem": "^4.3",
