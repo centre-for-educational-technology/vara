@@ -19,6 +19,6 @@ locally installed Drush dependency.
 - Import configuration and translations
 - Add configuration overrides
 
-## 1.1.1 - 19.04.2022
+## 1.1.2 - 19.04.2022
 
 - Standard core update
