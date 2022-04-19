@@ -15,3 +15,7 @@
   - Exported configuration
   - Added documentation for configuration overrides
 - Updated other Composer dependencies
+
+## 1.1.1 - 19.04.2022
+
+- Upgraded Drupal Core to version 9.3.11
