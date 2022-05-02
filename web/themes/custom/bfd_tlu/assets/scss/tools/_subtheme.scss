@@ -75,7 +75,8 @@
 //////////////////////////////////////////////////////////////////////////////
 // [ TAG CLOUDS BLOCK ]
 .block {
-  &.block-tagclouds {
+  &.block-tagclouds-blocktags,
+  &.block-listed-tagclouds-blocktags {
     word-break: break-all;
 
     .tagclouds-term {

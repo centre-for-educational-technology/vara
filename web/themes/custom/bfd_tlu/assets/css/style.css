@@ -17720,13 +17720,13 @@ h6 a:before {
   background-color: #28a745;
 }
 
-.block.block-tagclouds {
+.block.block-tagclouds-blocktags, .block.block-listed-tagclouds-blocktags {
   word-break: break-all;
 }
-.block.block-tagclouds .tagclouds-term:not(:first-child), .block.block-tagclouds .tagclouds-term:not(:last-child) {
+.block.block-tagclouds-blocktags .tagclouds-term:not(:first-child), .block.block-tagclouds-blocktags .tagclouds-term:not(:last-child), .block.block-listed-tagclouds-blocktags .tagclouds-term:not(:first-child), .block.block-listed-tagclouds-blocktags .tagclouds-term:not(:last-child) {
   margin-left: 0.2em;
 }
-.block.block-tagclouds .tagclouds-term a.tagclouds:hover {
+.block.block-tagclouds-blocktags .tagclouds-term a.tagclouds:hover, .block.block-listed-tagclouds-blocktags .tagclouds-term a.tagclouds:hover {
   border-bottom: 2px dotted;
 }
 
