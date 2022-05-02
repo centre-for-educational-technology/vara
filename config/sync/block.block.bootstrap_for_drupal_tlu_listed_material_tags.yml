@@ -1,23 +1,23 @@
-uuid: 3f04a553-87ed-47cd-aa28-ec5d93cb1321
+uuid: 4b7de0f7-acda-4102-8362-63075ddcffbe
 langcode: et
 status: true
 dependencies:
   module:
     - system
-    - tagclouds
+    - tlu_h5p
   theme:
     - bootstrap_for_drupal_tlu
-id: bootstrap_for_drupal_tlu_material_tags
+id: bootstrap_for_drupal_tlu_listed_material_tags
 theme: bootstrap_for_drupal_tlu
 region: sidebar_left
-weight: -6
+weight: 0
 provider: null
-plugin: 'tagclouds_block:tags'
+plugin: 'listed_tagclouds_block:tags'
 settings:
-  id: 'tagclouds_block:tags'
+  id: 'listed_tagclouds_block:tags'
   label: 'Materjalide võtmesõnapilv'
   label_display: '0'
-  provider: tagclouds
+  provider: tlu_h5p
   cache:
     max_age: 0
     contexts: {  }
