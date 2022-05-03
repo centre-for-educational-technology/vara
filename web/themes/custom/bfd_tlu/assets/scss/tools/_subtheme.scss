@@ -19,7 +19,19 @@
       // SAML login icon
       &[href*='saml_login'] {
         &:before {
-          mask     : url('../icon/login.svg');
+          mask     : url('../icon/box-arrow-in-right.svg');
+          mask-size: cover;
+        }
+      }
+      &[href*='language'] {
+        &:before {
+          mask     : url('../icon/globe.svg');
+          mask-size: cover;
+        }
+      }
+      &[href*='user/logout'] {
+        &:before {
+          mask     : url('../icon/box-arrow-in-left.svg');
           mask-size: cover;
         }
       }

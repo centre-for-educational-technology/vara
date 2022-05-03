@@ -17681,8 +17681,22 @@ h6 a:before {
 }
 #menu-add button a[href*=saml_login]:before,
 #menu-add ul:not(.contextual-links) a[href*=saml_login]:before {
-  -webkit-mask: url("../icon/login.svg");
-          mask: url("../icon/login.svg");
+  -webkit-mask: url("../icon/box-arrow-in-right.svg");
+          mask: url("../icon/box-arrow-in-right.svg");
+  -webkit-mask-size: cover;
+          mask-size: cover;
+}
+#menu-add button a[href*=language]:before,
+#menu-add ul:not(.contextual-links) a[href*=language]:before {
+  -webkit-mask: url("../icon/globe.svg");
+          mask: url("../icon/globe.svg");
+  -webkit-mask-size: cover;
+          mask-size: cover;
+}
+#menu-add button a[href*="user/logout"]:before,
+#menu-add ul:not(.contextual-links) a[href*="user/logout"]:before {
+  -webkit-mask: url("../icon/box-arrow-in-left.svg");
+          mask: url("../icon/box-arrow-in-left.svg");
   -webkit-mask-size: cover;
           mask-size: cover;
 }
