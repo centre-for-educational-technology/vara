@@ -2,4 +2,9 @@ node.add_materjal:
   title: 'Add material'
   route_name: node.add
   route_parameters: { node_type: 'material' }
+tlu_h5p:
+  title: 'Search materials'
+  route_name: tlu_h5p.search-materials
+  menu_name: main
+  weight: 10
 
