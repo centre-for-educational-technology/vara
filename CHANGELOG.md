@@ -23,3 +23,10 @@
 ## 1.1.3 - 21.04.2022
 
 - Upgraded Drupal Core to version 9.3.12
+
+## 1.2.0 - 05.05.2022
+
+ - Added a custom search materials solution
+ - Removed search materials view
+ - Added more translations
+ - Updated h5p_challenge module to version 1.2.0
