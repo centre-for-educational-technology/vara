@@ -1,7 +1,7 @@
 _core:
   default_config_hash: H8wSNSHTF9N4SCz3Bmf8AL5M1WjOwZfwrHtBq5BKMHU
-batch_size: '100'
 langcode: et
 xapi_endpoint: 'https://h5p.ee'
 key: '-'
 secret: '-'
+batch_size: 100
