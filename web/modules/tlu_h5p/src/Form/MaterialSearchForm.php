@@ -14,19 +14,12 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  * Provides a TLU H5P form.
  */
-class MaterialSearchForm extends FormBase {
+final class MaterialSearchForm extends FormBase {
 
   /**
    * Node type to search for.
    */
   const NODE_TYPE = 'material';
-
-  /**
-   * Entity field manager service.
-   *
-   * @var EntityFieldManagerInterface
-   */
-  protected EntityFieldManagerInterface $entityFieldManager;
 
   /**
    * Language manager service.
@@ -36,12 +29,10 @@ class MaterialSearchForm extends FormBase {
   protected LanguageManagerInterface $languageManager;
 
   /***
-   * @param EntityFieldManagerInterface $entityFieldManager
    * @param LanguageManagerInterface $languageManager
    */
-  public function __construct(EntityFieldManagerInterface $entityFieldManager, LanguageManagerInterface $languageManager)
+  public function __construct(LanguageManagerInterface $languageManager)
   {
-    $this->entityFieldManager = $entityFieldManager;
     $this->languageManager = $languageManager;
   }
 
@@ -52,7 +43,6 @@ class MaterialSearchForm extends FormBase {
   public static function create(ContainerInterface $container)
   {
     return new static(
-      $container->get('entity_field.manager'),
       $container->get('language_manager')
     );
   }
@@ -73,20 +63,6 @@ class MaterialSearchForm extends FormBase {
     return array_merge([
       'All' => $this->t('- All -'),
     ], $options);
-  }
-
-  /**
-   * Returns unit field options.
-   *
-   * @param bool $prependAll
-   * @return array|\Drupal\Core\StringTranslation\TranslatableMarkup[]
-   */
-  private function getUnitOptions(bool $prependAll = true): array {
-    $fields = $this->entityFieldManager->getFieldStorageDefinitions('node', self::NODE_TYPE);
-
-    $options = options_allowed_values($fields['field_unit']);
-
-    return $prependAll ? $this->prependAllOption($options) : $options;
   }
 
   /**
@@ -114,7 +90,6 @@ class MaterialSearchForm extends FormBase {
 
     $searchText = $this->getRequest()->get('search_text', '');
     $language = $this->getRequest()->get('language');
-    $unit = $this->getRequest()->get('unit');
     $tags = $this->getRequest()->get('tags');
 
     $form['#cache'] = [
@@ -138,14 +113,6 @@ class MaterialSearchForm extends FormBase {
       '#required' => FALSE,
       '#options' => $this->getLanguageOptions(),
       '#value' => $language,
-    ];
-
-    $form['unit'] = [
-      '#type' => 'select',
-      '#title' => $this->t('Unit'),
-      '#required' => FALSE,
-      '#options' => $this->getUnitOptions(),
-      '#value' => $unit,
     ];
 
     $form['tags'] = [

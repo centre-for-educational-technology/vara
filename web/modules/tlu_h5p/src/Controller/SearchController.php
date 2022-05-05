@@ -18,7 +18,7 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Returns responses for TLU H5P routes.
  */
-class SearchController extends ControllerBase {
+final class SearchController extends ControllerBase {
 
   /**
    * Node type to search for.
@@ -133,7 +133,6 @@ class SearchController extends ControllerBase {
    *
    * @param string $keys
    * @param string $language
-   * @param string $unit
    * @param string $tags
    * @return ResultSetInterface
    * @throws TagSearchException
@@ -141,7 +140,7 @@ class SearchController extends ControllerBase {
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    * @throws \Drupal\search_api\SearchApiException
    */
-  protected function getSearchResults(string $keys, string $language, string $unit, string $tags): ResultSetInterface {
+  protected function getSearchResults(string $keys, string $language, string $tags): ResultSetInterface {
     $index = Index::load('default_index');
     $query = $index->query();
 
@@ -153,10 +152,6 @@ class SearchController extends ControllerBase {
 
     if ($language && $language !== 'All') {
       $query->setLanguages([$language]);
-    }
-
-    if ($unit && $unit !== 'All') {
-      $query->addCondition('field_unit', $unit);
     }
 
     if ($tags) {
@@ -191,15 +186,14 @@ class SearchController extends ControllerBase {
 
     $keys = $this->currentRequest->get('search_text');
     $language = $this->currentRequest->get('language');
-    $unit = $this->currentRequest->get('unit');
     $tags = $this->currentRequest->get('tags');
 
-    if (!($keys || $language || $unit || $tags)) {
+    if (!($keys || $language || $tags)) {
       return $build;
     }
 
     try {
-      $results = $this->getSearchResults($keys, $language, $unit, $tags);
+      $results = $this->getSearchResults($keys, $language, $tags);
     } catch (TagSearchException $e) {
       $this->messenger->addError($this->t('There are no tags matching <em class="placeholder">@tag</em>.', ['@tag' => $e->getMessage()]));
       return $build;

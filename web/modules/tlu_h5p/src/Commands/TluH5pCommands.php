@@ -69,6 +69,7 @@ class TluH5pCommands extends DrushCommands
       module_load_include('inc', 'node', 'node.admin');
       $nodes = $this->entityTypeManager->getStorage('node')
         ->getQuery()
+        ->accessCheck(FALSE)
         ->condition('uid', $fromAccount->id())
         ->execute();
       node_mass_update($nodes, [

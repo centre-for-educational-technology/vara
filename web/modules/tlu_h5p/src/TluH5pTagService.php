@@ -3,10 +3,33 @@
 namespace Drupal\tlu_h5p;
 
 use Drupal\Core\Cache\CacheBackendInterface;
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Database\Connection;
+use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\tagclouds\TagService;
 
 class TluH5pTagService extends TagService implements TluH5pTagServiceInterface
 {
+
+  /**
+   * Database connection.
+   *
+   * @var \Drupal\Core\Database\Connection
+   */
+  protected Connection $connection;
+
+  /**
+   * Constructor.
+   *
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
+   * @param \Drupal\Core\Language\LanguageManagerInterface $language_manager
+   * @param \Drupal\Core\Cache\CacheBackendInterface $cache_store
+   * @param \Drupal\Core\Database\Connection $connection
+   */
+  public function __construct(ConfigFactoryInterface $config_factory, LanguageManagerInterface $language_manager, CacheBackendInterface $cache_store, Connection $connection) {
+    parent::__construct($config_factory, $language_manager, $cache_store);
+    $this->connection = $connection;
+  }
 
   /**
    * {@inheritdoc}
@@ -31,7 +54,7 @@ class TluH5pTagService extends TagService implements TluH5pTagServiceInterface
       }
       $config = $this->configFactory->get('tagclouds.settings');
 
-      $query = \Drupal::database()->select('taxonomy_term_data', 'td');
+      $query = $this->connection->select('taxonomy_term_data', 'td');
       $query->addExpression('COUNT(td.tid)', 'count');
       $query->fields('tfd', ['name', 'description__value']);
       $query->fields('td', ['tid', 'vid']);

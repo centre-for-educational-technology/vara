@@ -18,11 +18,6 @@ class TluH5pServiceProvider extends ServiceProviderBase implements ServiceModifi
         $definition = $container->getDefinition('tagclouds.cloud_builder');
         $definition->setClass(TluH5pCloudBuilder::class);
       }
-
-      if ($container->hasDefinition('tagclouds.tag')) {
-        $definition = $container->getDefinition('tagclouds.tag');
-        $definition->setClass(TluH5pTagService::class);
-      }
     }
 
 }

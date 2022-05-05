@@ -3,3 +3,6 @@ services:
     class: Drupal\tlu_h5p\EventSubscriber\H5pEmbedSubscriber
     tags:
       - { name: event_subscriber }
+  tagclouds.tag:
+    class: Drupal\tlu_h5p\TluH5pTagService
+    arguments: [ '@config.factory', '@language_manager', '@cache.data', '@database' ]
