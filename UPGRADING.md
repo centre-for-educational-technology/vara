@@ -30,3 +30,7 @@ locally installed Drush dependency.
 ## 1.2.0 - 05.05.2022
 
 - Import configuration and languages
+
+## 1.2.1 - 27.05.2022
+
+- Standard core update
