@@ -42,3 +42,7 @@
 ## 1.2.3 - 13.06.2022
 
 - Upgraded Drupal Core to version 9.3.16
+
+## 1.2.4 - 22.07.2022
+
+- Upgraded Drupal Core to version 9.4.3
