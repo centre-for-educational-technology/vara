@@ -10,7 +10,9 @@ print_line
 
 echo ''
 composer outdated "drupal/*"
+chmod u+w web/sites/default
 composer update drupal/core "drupal/core-*" --with-all-dependencies
+chmod u-w web/sites/default
 echo ''
 
 echo ''

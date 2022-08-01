@@ -46,3 +46,12 @@
 ## 1.2.4 - 22.07.2022
 
 - Upgraded Drupal Core to version 9.4.3
+
+## 1.2.5 - 01.08.2022
+
+- Upgraded Drupal core to version 9.4.4
+- Updated admin_toolbar module to version 3.1.1
+- Updated h5p_challenge module to version 1.4.0
+- Updated mailsystem module to version 4.4.0
+- Updated search_api module to version 1.25.0
+- Updated tagclouds module to version 2.0.2

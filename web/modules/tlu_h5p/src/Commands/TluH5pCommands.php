@@ -4,6 +4,7 @@ namespace Drupal\tlu_h5p\Commands;
 
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drush\Commands\DrushCommands;
 
 
@@ -25,14 +26,22 @@ class TluH5pCommands extends DrushCommands
   protected $entityTypeManager;
 
   /**
+   * Module handler
+   *
+   * @var \Drupal\Core\Extension\ModuleHandlerInterface
+   */
+  protected $moduleHandler;
+
+  /**
    * Constructs a new command.
    *
    * @param \Drupal\Core\Database\Connection $connection
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
    */
-  public function __construct(Connection $connection, EntityTypeManagerInterface $entityTypeManager) {
+  public function __construct(Connection $connection, EntityTypeManagerInterface $entityTypeManager, ModuleHandlerInterface $moduleHandler) {
     $this->database = $connection;
     $this->entityTypeManager = $entityTypeManager;
+    $this->moduleHandler = $moduleHandler;
   }
 
   /**
@@ -66,7 +75,7 @@ class TluH5pCommands extends DrushCommands
       '!to' => $toAccount->getAccountName(),
     ]))) {
       // Reassign nodes (current revisions).
-      module_load_include('inc', 'node', 'node.admin');
+      $this->moduleHandler->loadInclude('node', 'inc', 'node.admin');
       $nodes = $this->entityTypeManager->getStorage('node')
         ->getQuery()
         ->accessCheck(FALSE)
