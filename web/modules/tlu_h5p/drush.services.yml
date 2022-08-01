@@ -1,6 +1,6 @@
 services:
   tlu_h5p.commands:
     class: \Drupal\tlu_h5p\Commands\TluH5pCommands
-    arguments: ['@database', '@entity_type.manager']
+    arguments: ['@database', '@entity_type.manager', '@module_handler']
     tags:
       - { name: drush.command }
