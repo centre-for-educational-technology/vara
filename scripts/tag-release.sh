@@ -22,7 +22,7 @@ fi
 MAIN_BRANCH="vara"
 PRODUCTION_BRANCH="vara-production"
 current_branch=$(git branch --show-current)
-tag_name=$1
+tag_name="vara-$1"
 
 print_header "Beginning the process of tagging a new release"
 

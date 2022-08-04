@@ -55,3 +55,7 @@
 - Updated mailsystem module to version 4.4.0
 - Updated search_api module to version 1.25.0
 - Updated tagclouds module to version 2.0.2
+
+## 1.2.6 - 04.08.2022
+
+- Upgraded Drupal core to version 9.4.5

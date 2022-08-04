@@ -52,3 +52,7 @@ locally installed Drush dependency.
 - Standard core update
 - Requires running database migrations
 - Requires importing settings
+
+## 1.2.6 - 04.08.2022
+
+- Standard core update
