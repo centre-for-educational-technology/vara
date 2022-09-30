@@ -19,10 +19,10 @@ then
   exit 1
 fi
 
-MAIN_BRANCH="vara"
-PRODUCTION_BRANCH="vara-production"
+MAIN_BRANCH="main"
+PRODUCTION_BRANCH="production"
 current_branch=$(git branch --show-current)
-tag_name="vara-$1"
+tag_name="$1"
 
 print_header "Beginning the process of tagging a new release"
 
