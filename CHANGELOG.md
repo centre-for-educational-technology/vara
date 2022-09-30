@@ -59,3 +59,8 @@
 ## 1.2.6 - 04.08.2022
 
 - Upgraded Drupal core to version 9.4.5
+
+## 1.2.7 - 30.09.2022
+
+- Updated Drupal core to version 9.4.7
+- Added PHP version 8.0 as a dependency
