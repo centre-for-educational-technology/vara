@@ -1,0 +1,26 @@
+diff --git a/modules/h5peditor/src/Plugin/Field/FieldWidget/H5PEditorWidget.php b/modules/h5peditor/src/Plugin/Field/FieldWidget/H5PEditorWidget.php
+index 725df46..d6b1f3a 100644
+--- a/modules/h5peditor/src/Plugin/Field/FieldWidget/H5PEditorWidget.php
++++ b/modules/h5peditor/src/Plugin/Field/FieldWidget/H5PEditorWidget.php
+@@ -112,7 +112,7 @@ class H5PEditorWidget extends H5PWidgetBase {
+     ];
+ 
+     // Skip saving content if no library is selector, or clearing content
+-    if (!$value['library'] || $value['clear_content']) {
++    if (!$value['library'] || (isset($value['clear_content']) && $value['clear_content'])) {
+       $return_value['h5p_content_id'] = NULL;
+ 
+       if ($value['id'] && !$do_new_revision && !$value['new_translation']) {
+diff --git a/src/Plugin/Field/FieldWidget/H5PUploadWidget.php b/src/Plugin/Field/FieldWidget/H5PUploadWidget.php
+index d34a9d7..f2c9810 100644
+--- a/src/Plugin/Field/FieldWidget/H5PUploadWidget.php
++++ b/src/Plugin/Field/FieldWidget/H5PUploadWidget.php
+@@ -114,7 +114,7 @@ class H5PUploadWidget extends H5PWidgetBase {
+     ];
+ 
+     // Determine if we're clearing the content
+-    if ($value['clear_content']) {
++    if (isset($value['clear_content']) && $value['clear_content']) {
+       $return_value['h5p_content_id'] = NULL;
+       $return_value['h5p_content_revisioning_handled'] = TRUE;
+ 

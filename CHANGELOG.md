@@ -64,3 +64,9 @@
 
 - Updated Drupal core to version 9.4.7
 - Added PHP version 8.0 as a dependency
+
+## 1.2.8 - 20.10.2022
+
+- Updated Drupal core to version 9.4.7
+- Added several patches for h5p module
+- Updated a few modules to the latest versions

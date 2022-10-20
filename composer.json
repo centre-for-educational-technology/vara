@@ -109,7 +109,10 @@
         "patches": {
             "drupal/h5p": {
                 "Use display name instead of username for initial author in metadata": "patches/h5p-metadata-display-name-as-default-author.patch",
-                "Add file upload maximum size to hub input placeholder": "patches/h5p-hub-file-upload-maximum-size.patch"
+                "Add file upload maximum size to hub input placeholder": "patches/h5p-hub-file-upload-maximum-size.patch",
+                "Fix for passing NULL to json_decode()": "https://www.drupal.org/files/issues/2022-10-18/fixed-json-decode-null-value.patch",
+                "Fix for unclickable checkboxes": "https://www.drupal.org/files/issues/2022-07-11/3295255_2.patch",
+                "Fixed a warning when trying to check for clear_content checkbox": "patches/clear-content-warning.patch"
             },
             "h5p/h5p-editor": {
                 "Fix PHP 8 warning": "patches/h5p-editor-php-8-warning.patch"
