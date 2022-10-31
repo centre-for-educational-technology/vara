@@ -1,0 +1,8 @@
+uuid: c6b1b1d7-4845-4e50-b88b-1ca8982cfee5
+langcode: en
+status: true
+dependencies: {  }
+name: School
+vid: school
+description: 'containing school name'
+weight: 0
