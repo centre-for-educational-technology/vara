@@ -1,0 +1,14 @@
+uuid: 71d303e7-222f-48f5-8afb-7e03eade79a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - system
+id: student
+label: Student
+weight: -5
+is_admin: null
+permissions:
+  - 'access comments'
+  - 'access content'
