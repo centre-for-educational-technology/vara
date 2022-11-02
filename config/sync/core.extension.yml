@@ -46,6 +46,7 @@ module:
   path: 0
   path_alias: 0
   rdf: 0
+  role_fields: 0
   search_api: 0
   search_api_db: 0
   shortcut: 0

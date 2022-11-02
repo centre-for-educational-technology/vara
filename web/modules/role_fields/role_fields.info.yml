@@ -1,0 +1,5 @@
+name: role_fields
+type: module
+description: Adding extra fields on selection of user roles for teacher and student
+package: Custom
+core_version_requirement: ^9 || ^10

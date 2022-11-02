@@ -3,10 +3,15 @@ langcode: et
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_class
+    - field.field.user.user.field_full_name
+    - field.field.user.user.field_school
+    - field.field.user.user.field_subject
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
+    - options
     - user
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
@@ -15,6 +20,37 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_class:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_full_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_school:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_subject:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
   member_for:
     settings: {  }
     third_party_settings: {  }

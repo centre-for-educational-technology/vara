@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for role_fields module.
+ */
+use Drupal\Core\Form\FormStateInterface;
+
+function role_fields_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+ if ($form_id == 'user_form' or $form_id == 'user_register_form')
+  {
+    #dump($form);
+    $form['account']['mail']['#required'] = TRUE;
+
+
+  if (array_key_exists('field_subject',$form) and array_key_exists('field_class',$form) and array_key_exists('field_school',$form) )
+  {
+    $form['field_subject']['#states'] = array(
+      'visible' => array(
+        ':input[name="roles[teacher]"]' =>['checked' => TRUE]
+      )
+    );
+    $form['field_subject']['widget'][0]['target_id']['#states'] =   array(
+      'required' => array(
+        ':input[name="roles[teacher]"]' =>['checked' => TRUE]
+      )
+    );
+
+    $form['field_school']['widget'][0]['target_id']['#states'] = array(
+      'required' => array(
+        array(
+          array(':input[name="roles[teacher]"]' =>['checked' => TRUE]),
+          'or',
+          array(':input[name="roles[student]"]' =>['checked' => TRUE]),
+        ),
+      ),
+    );
+
+    $form['field_class']['widget']['#states'] = array(
+      'required' => array(
+        array(
+          array(':input[name="roles[teacher]"]' =>['checked' => TRUE]),
+          'or',
+          array(':input[name="roles[student]"]' =>['checked' => TRUE]),
+        ),
+      ),
+    );
+  }
+
+ }
+
+}
