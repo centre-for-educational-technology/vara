@@ -70,3 +70,9 @@
 - Updated Drupal core to version 9.4.7
 - Added several patches for h5p module
 - Updated a few modules to the latest versions
+
+## 1.2.9 - 10.11.2022
+
+- Added Teacher and Student roles
+- Added Taxonomies for School and Subject
+- Added extra profile fields to Teache and Student roles
