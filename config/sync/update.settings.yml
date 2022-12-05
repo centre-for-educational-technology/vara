@@ -10,5 +10,5 @@ fetch:
   timeout: 30
 notification:
   emails:
-    - oppevara@tlu.ee
+    - vara@h5p.ee
   threshold: security
