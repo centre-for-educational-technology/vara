@@ -6,91 +6,91 @@
  */
 
 /**
- * Implements hook_install().
- */
-function role_fields_install() {
-  \Drupal::messenger()->addStatus(__FUNCTION__);
-}
-
-/**
- * Implements hook_uninstall().
- */
-function role_fields_uninstall() {
-  \Drupal::messenger()->addStatus(__FUNCTION__);
-}
-
-/**
  * Implements hook_schema().
  */
 function role_fields_schema() {
-  $schema['role_fields_example'] = [
-    'description' => 'Table description.',
+  $schema['role_fields_extended_xapi'] = [
+    'description' => 'Stores data about LRS statement with additional data',
     'fields' => [
-      'id' => [
+      'rid' => [
         'type' => 'serial',
+        'unsigned' => TRUE,
+        'size' => 'normal', // tiny / small / medium / normal / big
         'not null' => TRUE,
-        'description' => 'Primary Key: Unique record ID.',
+        'description' => 'Record Id in the table',
       ],
-      'uid' => [
+      'nid' => [
         'type' => 'int',
         'unsigned' => TRUE,
+        'size' => 'big', // tiny / small / medium / normal / big
         'not null' => TRUE,
-        'default' => 0,
-        'description' => 'The {users}.uid of the user who created the record.',
+        'description' => 'Resource ID or Node id',
       ],
-      'status' => [
-        'description' => 'Boolean indicating whether this record is active.',
+      'level' => [
         'type' => 'int',
         'unsigned' => TRUE,
+        'size' => 'small',
         'not null' => TRUE,
-        'default' => 0,
-        'size' => 'tiny',
+        'description' => 'Level of difficulty of node id.',
       ],
-      'type' => [
-        'type' => 'varchar_ascii',
-        'length' => 64,
-        'not null' => TRUE,
-        'default' => '',
-        'description' => 'Type of the record.',
-      ],
-      'created' => [
+      'grade' => [
         'type' => 'int',
+        'unsigned' => FALSE,
+        'size' => 'small',
         'not null' => TRUE,
+        'description' => 'Class to which resource is associated.',
+      ],
+      'subject' => [
+        'type' => 'text',
+        'size' => 'small',
+        'not null' => FALSE,
+        'description' => 'Subject to which resource is associated.',
+      ],
+       'actor' => [
+        'type' => 'int',
+        'unsigned' => FALSE,
+        'size' => 'small',
+        'not null' => TRUE,
+        'description' => 'User id',
+      ],
+      'verb' => [
+        'type' => 'text',
+        'size' => 'small',
+        'not null' => FALSE,
+        'description' => 'Verb of xAPI statement',
+      ],
+      'answer_check' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
         'default' => 0,
-        'description' => 'Timestamp when the record was created.',
+        'description' => 'Store whether the given answer is correct or not. Applicable to answered verb only.',
+      ],
+      'duration' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+        'default' => 0,
+        'description' => 'Time duration from attempted to answered in seconds',
       ],
       'data' => [
         'type' => 'blob',
-        'not null' => TRUE,
         'size' => 'big',
-        'description' => 'The arbitrary data for the item.',
+        'not null' => FALSE,
+        'description' => 'JSON-encoded statement or an array of statements (could be NULL).',
+      ],
+      'created' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Creation timestamp.',
       ],
     ],
-    'primary key' => ['id'],
     'indexes' => [
-      'type' => ['type'],
-      'uid' => ['uid'],
-      'status' => ['status'],
+      'record_id' => ['rid'],
+      'created_timestamp' => ['created'],
     ],
   ];
-
   return $schema;
-}
-
-/**
- * Implements hook_requirements().
- */
-function role_fields_requirements($phase) {
-  $requirements = [];
-
-  if ($phase == 'runtime') {
-    $value = mt_rand(0, 100);
-    $requirements['role_fields_status'] = [
-      'title' => t('role_fields status'),
-      'value' => t('role_fields value: @value', ['@value' => $value]),
-      'severity' => $value > 50 ? REQUIREMENT_INFO : REQUIREMENT_WARNING,
-    ];
-  }
-
-  return $requirements;
 }

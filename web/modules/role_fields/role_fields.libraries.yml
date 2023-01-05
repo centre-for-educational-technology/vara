@@ -1,0 +1,8 @@
+behavior:
+  version: 1.x
+  js:
+    js/behavior.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupalSettings

@@ -51,3 +51,26 @@ function role_fields_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $fo
  }
 
 }
+
+/**
+Hook to alter h5p scipts to add extra fields to context of generated XAPI statements.
+*/
+
+function role_fields_page_attachments(array &$attachments) {
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $attachments['#attached']['library'][] = 'role_fields/behavior';
+  if ($node instanceof \Drupal\node\NodeInterface)
+    {
+      $nid = $node->id();
+      $grade = $node->field_grade->value;
+      $subject = $node->field_subject->entity->getName();
+      $level = $node->field_level_of_difficulty->value;
+      $user = $user = \Drupal::currentUser();
+      $attachments['#attached']['drupalSettings']['role_fields']['id'] = $nid;
+      $attachments['#attached']['drupalSettings']['role_fields']['grade'] = $grade;
+      $attachments['#attached']['drupalSettings']['role_fields']['level'] = $level;
+      $attachments['#attached']['drupalSettings']['role_fields']['subject'] = $subject;
+      $attachments['#attached']['drupalSettings']['role_fields']['actor'] = $user->id();
+      }
+}
