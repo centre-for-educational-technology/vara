@@ -1,0 +1,21 @@
+uuid: 37f65f88-f501-4407-b46d-00fbc478f91a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grade
+    - node.type.material
+  module:
+    - options
+id: node.material.field_grade
+field_name: field_grade
+entity_type: node
+bundle: material
+label: Grade
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

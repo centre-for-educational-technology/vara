@@ -1,0 +1,21 @@
+uuid: b6bcdf35-aeae-43f3-9dad-cf05fe3540de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_level_of_difficulty
+    - node.type.material
+  module:
+    - options
+id: node.material.field_level_of_difficulty
+field_name: field_level_of_difficulty
+entity_type: node
+bundle: material
+label: 'Level of difficulty'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer
